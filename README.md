@@ -1,6 +1,9 @@
 # Final-Year-Project-Applied-Diss
 4th year Software Development Final Year Project
 
+<p align="center"><img src="https://github.com/Gazza1996/Final-Year-Project-Applied-Diss/blob/master/Images/Cows.jpg" width="250" height="250"></p>
+
+
 ## [Contents](#contents)
 * [Project Details](#details)
 * [Introduction](#intro)
@@ -41,8 +44,9 @@ Click below to view our Dissertation PDF or click [here]
 [Top](#contents) 
 
 # Architecture<a name = "arc"></a>
+The following is an overview of the Technologies/Architecture used creating Farm At Ease.
 
-
+<p align="center"><kbd><img src="https://github.com/Gazza1996/Final-Year-Project-Applied-Diss/blob/master/Images/img.png"></p></kbd>
 
 ### Presentation Tier
 
