@@ -41,9 +41,8 @@ Click below to view our Dissertation PDF or click [here]
 [Top](#contents) 
 
 # Architecture<a name = "arc"></a>
-The following is an overview of the Technologies/Architecture used creating Digs.   
 
-<p align="center"><kbd><img src="https://github.com/gerardnaughton7/4th-Year-Final-Year-Project/blob/master/DigsDissertation/img/Architecture.PNG"></p></kbd>
+
 
 ### Presentation Tier
 
