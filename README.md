@@ -1,6 +1,15 @@
 # Final-Year-Project-Applied-Diss
 4th year Software Development Final Year Project
 
+## [Contents](#contents)
+* [Project Details](#details)
+* [Introduction](#intro)
+* [Video Demo](#demo)
+* [Dissertation](#dissertation)
+* [Architecture](#arc) 
+* [Features](#features)
+* [App Preview](#preview)
+
 # Project Details<a name = "details"></a>
 
 | Project Details   |     |
@@ -52,6 +61,16 @@ The following is an overview of the Technologies/Architecture used creating Digs
 
 # Features<a name = "features"></a>
 The following are the main features of our project:
+* Users has option for four areas AI, Medicines, Tagging, Feed.
+* Users can update delete in any of the four areas
+* Users can search tags.
+* Logged in users can create their own notice Board add ads for the app
+* Logged in users can post their own messages on the Farm At Ease Notic Board
+* Logged in users can view messages they have created
+* Logged in users can edit and delete messages they have created
+* Users can create their own Account
+* Users can Log into their Account
+* Users can reset their password if they have forgotten theirs
 
 
 [Top](#contents) 
