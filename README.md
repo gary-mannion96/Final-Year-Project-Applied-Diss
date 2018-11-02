@@ -28,3 +28,27 @@ For our final year project, we decided to create a Farming App called Farm At Ea
 
 # Dissertation<a name = "dissertation"></a>
 Click below to view our Dissertation PDF or click [here]
+
+[Top](#contents) 
+
+# Architecture<a name = "arc"></a>
+The following is an overview of the Technologies/Architecture used creating Digs.   
+
+<p align="center"><kbd><img src="https://github.com/gerardnaughton7/4th-Year-Final-Year-Project/blob/master/DigsDissertation/img/Architecture.PNG"></p></kbd>
+
+### Presentation Tier
+
+* [Ionic 3 Framework](https://ionicframework.com/docs/)
+* [Angular 4 Framework](https://angular.io/)
+* [Firebase Authentication](https://firebase.google.com/)
+
+### Logic Tier
+* [NodeJS](https://nodejs.org/en/)
+
+### Data Tier
+* [MongoDB](https://www.mongodb.com/company) Database 
+
+[Top](#contents) 
+
+# Features<a name = "features"></a>
+The following are the main features of our project:
