@@ -52,3 +52,9 @@ The following is an overview of the Technologies/Architecture used creating Digs
 
 # Features<a name = "features"></a>
 The following are the main features of our project:
+
+
+[Top](#contents) 
+
+# App Preview<a name = "preview"></a>
+The following images are previews of various pages in our application. 
