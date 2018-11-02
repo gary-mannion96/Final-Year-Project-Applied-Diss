@@ -8,7 +8,7 @@
 | **Course** | BSc (Hons) in Software Development  |
 | **Module** |  Applied Project and Minor Dissertation |
 | **College** | [GMIT](http://www.gmit.ie/) Galway |
-| **Students** |https://www.linkedin.com/in/derrick-conway-12b81113a/ https://www.linkedin.com/in/gary-mannion-56236713a/|
+| **Students** |[Derrick Conway]https://www.linkedin.com/in/derrick-conway-12b81113a/ G00328406 [Gary Mannion]https://www.linkedin.com/in/gary-mannion-56236713a/ G00319609|
 | **Project Supervisor** | Patrick Mannion |
 | **Module Supervisor** | John Healy |
 | **Project Title** | farm ease |
