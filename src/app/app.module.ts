@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { taggingPage } from '../pages/tagging/tagging';
 import { FeedPage } from '../pages/feed/feed';
 import { medicinePage} from '../pages/medicine/medicine';
+import { AIPage } from '../pages/AI/ai'
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -16,7 +17,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     taggingPage,
     FeedPage,
-    medicinePage
+    medicinePage,
+    AIPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     taggingPage,
     FeedPage,
-    medicinePage
+    medicinePage,
+    AIPage
   ],
   providers: [
     StatusBar,
