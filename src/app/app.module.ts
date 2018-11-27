@@ -6,11 +6,12 @@ import { MyApp } from './app.component';
 import { taggingPage } from '../pages/tagging/tagging';
 import { FeedPage } from '../pages/feed/feed';
 import { medicinePage} from '../pages/medicine/medicine';
-import { AIPage } from '../pages/AI/ai'
+import { AIPage } from '../pages/AI/ai';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { menuPage } from '../pages/MainMenu/menu';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     taggingPage,
     FeedPage,
     medicinePage,
-    AIPage
+    AIPage,
+    menuPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     taggingPage,
     FeedPage,
     medicinePage,
-    AIPage
+    AIPage,
+    menuPage
   ],
   providers: [
     StatusBar,
