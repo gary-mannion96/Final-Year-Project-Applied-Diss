@@ -23,19 +23,15 @@ export class FeedPage {
 
   private setFeedMessage() {
     if (this.feedValue < 18.5) {
-      this.feedMessage = "Underweight"
+      this.feedMessage = "Not enough silage"
     }
   
     if (this.feedValue > 18.5 && this.feedValue < 25) {
-      this.feedMessage = "Normal"
-    }
-  
-    if (this.feedValue > 25 && this.feedValue < 30) {
-      this.feedMessage = "Overweight"
+      this.feedMessage = "Perfect amount"
     }
   
     if (this.feedValue > 30) {
-      this.feedMessage = "Obese"
+      this.feedMessage = "Too Much"
     }
   }
 }
