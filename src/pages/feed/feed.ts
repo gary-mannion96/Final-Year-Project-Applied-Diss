@@ -11,6 +11,7 @@ export class FeedPage {
   dairyCow: number;
   dairyFeed: number;
   dairySilage: number;
+  dairybaleValue: number;
   /*
   Cattle
   */
@@ -40,7 +41,7 @@ export class FeedPage {
     if (this.dairySilage > 0 && this.dairyCow > 0) {
       let finalFeed = this.dairyCow * this.dairySilage * 1.6;
       this.dairyFeed = parseFloat(finalFeed.toFixed(2));
-      this.baleValue = this.dairyCow * this.dairySilage * 1.6 / 0.9;
+      this.dairybaleValue = this.dairyCow * this.dairySilage * 1.6 / 0.9;
     }
   }
 
