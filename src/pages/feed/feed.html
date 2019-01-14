@@ -59,5 +59,33 @@
         <p>Bales in stock: {{baleAMT}}</p>
       </ion-card-content>
     </ion-card>
+
+    <ion-list>
+        <!-- Pit Size -->
+        <ion-item>
+          <ion-label floating>Height(m):</ion-label>
+          <ion-input type="number" [(ngModel)]="h"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Width(m): </ion-label>
+          <ion-input type="number" [(ngModel)]="w"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Length(m): </ion-label>
+            <ion-input type="number" [(ngModel)]="l"></ion-input>
+          </ion-item>
+      </ion-list>
+      <div padding>
+        <button block ion-button (click)="silagePit()">Calculate</button>
+      </div>
+    
+      <ion-card *ngIf="pitDim">
+          <ion-card-header>
+            Silage Pit
+          </ion-card-header>
+          <ion-card-content>
+            <p>Silage in pit: {{pitDim}}</p>
+          </ion-card-content>
+        </ion-card>
  
 </ion-content>

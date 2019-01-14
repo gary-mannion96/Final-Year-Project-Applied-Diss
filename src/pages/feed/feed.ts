@@ -18,6 +18,13 @@ export class FeedPage {
   bales: number;
   sBales: number;
   baleAMT: number;
+  /*
+  pit
+  */
+  h: number;
+  w: number;
+  l: number;
+  pitDim: number;
 
   constructor() {
   }
@@ -34,6 +41,13 @@ export class FeedPage {
     if(this.bales > 0 && this.sBales >= 0){
       let finalBales = (this.bales * 0.8 + this.sBales * 0.8) / 0.9;
       this.baleAMT = parseFloat(finalBales.toFixed(2));
+    }
+  }
+
+  silagePit(){
+    if(this.h > 0 && this.w > 0 && this.l > 0){
+      let pitSize = (this.h * this.w * this.l) * 0.77;
+      this.pitDim = parseFloat(pitSize.toFixed(2));
     }
   }
 
