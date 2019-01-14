@@ -17,21 +17,7 @@ export class FeedPage {
     if (this.silage > 0 && this.cattle > 0) {
       let finalFeed = this.cattle * this.silage * 1.6;
       this.feedValue = parseFloat(finalFeed.toFixed(2));
-      this.setFeedMessage();
     }
   }
 
-  private setFeedMessage() {
-    if (this.feedValue < 18.5) {
-      this.feedMessage = "Not enough silage"
-    }
-  
-    if (this.feedValue > 18.5 && this.feedValue < 25) {
-      this.feedMessage = "Perfect amount"
-    }
-  
-    if (this.feedValue > 30) {
-      this.feedMessage = "Too Much"
-    }
-  }
 }

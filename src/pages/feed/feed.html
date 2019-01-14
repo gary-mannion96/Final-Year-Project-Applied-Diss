@@ -10,11 +10,11 @@
 <ion-content>
   <ion-list>
     <ion-item>
-      <ion-label floating>Silage Quantity:</ion-label>
+      <ion-label floating>Cattle amount:</ion-label>
       <ion-input type="number" [(ngModel)]="silage"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating>Cattle amount:</ion-label>
+      <ion-label floating>Months needed: </ion-label>
       <ion-input type="number" [(ngModel)]="cattle"></ion-input>
     </ion-item>
   </ion-list>
@@ -27,9 +27,8 @@
       Feed Calculation
     </ion-card-header>
     <ion-card-content>
-      <p>Silage: {{this.silage}}, Cattle {{this.cattle}}</p>
+      <p>Months: {{this.silage}}, Cattle {{this.cattle}}</p>
       <p>Feed: {{feedValue}}</p>
-      <p><strong>{{feedMessage}}</strong></p>
     </ion-card-content>
   </ion-card>
  
