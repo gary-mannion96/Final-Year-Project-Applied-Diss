@@ -7,11 +7,40 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class='silage-image'>
+<ion-content padding class="silage-image">
+    <!-- Dairy Cows silage calculator -->
+    <ion-list>
+        <ion-list-header class="cattle-size">
+          Dairy Cows
+        </ion-list-header>
+        <ion-item>
+          <ion-label floating>Dairy Cows amount:</ion-label>
+          <ion-input type="number" [(ngModel)]="dairySilage"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Months needed: </ion-label>
+          <ion-input type="number" [(ngModel)]="dairyCow"></ion-input>
+        </ion-item>
+      </ion-list>
+      <div padding>
+        <button block ion-button (click)="calculateDairyCows()">Calculate</button>
+      </div>
+    
+      <ion-card *ngIf="dairyFeed">
+          <ion-card-header>
+            Feed Calculation
+          </ion-card-header>
+          <ion-card-content>
+            <p>Dairy Cows: {{this.dairySilage}}, Months: {{this.dairyCow}}</p>
+            <p>Silage needed(in Tonnes): {{dairyFeed}}</p>
+            <p>Bales needed: {{this.baleValue}} </p>
+          </ion-card-content>
+        </ion-card>
+
   <!-- Cows silage calculator -->
   <ion-list>
     <ion-list-header class="cattle-size">
-      Cattle
+      Cattle above 1 Year
     </ion-list-header>
     <ion-item>
       <ion-label floating>Cattle amount:</ion-label>

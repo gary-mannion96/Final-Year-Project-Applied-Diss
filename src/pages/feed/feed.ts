@@ -6,6 +6,12 @@ import { Component } from '@angular/core';
 })
 export class FeedPage {
   /*
+  Dairy Cows
+  */
+  dairyCow: number;
+  dairyFeed: number;
+  dairySilage: number;
+  /*
   Cattle
   */
   cattle: number;
@@ -29,11 +35,20 @@ export class FeedPage {
   constructor() {
   }
 
+
+  calculateDairyCows(){
+    if (this.dairySilage > 0 && this.dairyCow > 0) {
+      let finalFeed = this.dairyCow * this.dairySilage * 1.6;
+      this.dairyFeed = parseFloat(finalFeed.toFixed(2));
+      this.baleValue = this.dairyCow * this.dairySilage * 1.6 / 0.9;
+    }
+  }
+
   calculateFeed(){
     if (this.silage > 0 && this.cattle > 0) {
-      let finalFeed = this.cattle * this.silage * 1.6;
+      let finalFeed = this.cattle * this.silage * 1.3;
       this.feedValue = parseFloat(finalFeed.toFixed(2));
-      this.baleValue = this.cattle * this.silage * 1.6 / 0.9;
+      this.baleValue = this.cattle * this.silage * 1.3 / 0.9;
     }
   }
 
