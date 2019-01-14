@@ -15,7 +15,7 @@ export class FeedPage {
 
   calculateFeed(){
     if (this.silage > 0 && this.cattle > 0) {
-      let finalFeed = this.silage / (this.cattle / 100 * this.cattle / 100);
+      let finalFeed = this.cattle * this.silage * 1.6;
       this.feedValue = parseFloat(finalFeed.toFixed(2));
       this.setFeedMessage();
     }
