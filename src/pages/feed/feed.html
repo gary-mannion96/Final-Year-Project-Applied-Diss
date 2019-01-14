@@ -8,6 +8,7 @@
 </ion-header>
 
 <ion-content>
+  <!-- Cows silage calculator -->
   <ion-list>
     <ion-item>
       <ion-label floating>Cattle amount:</ion-label>
@@ -20,6 +21,21 @@
   </ion-list>
   <div padding>
     <button block ion-button (click)="calculateFeed()">Calculate</button>
+  </div>
+
+  <ion-list>
+    <!-- Bales calculator -->
+    <ion-item>
+      <ion-label floating>1st/2nd cut bales:</ion-label>
+      <ion-input type="number" [(ngModel)]="silage"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Surplus Bales: </ion-label>
+      <ion-input type="number" [(ngModel)]="cattle"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button block ion-button (click)="calculateBales()">Calculate</button>
   </div>
 
   <ion-card *ngIf="feedValue">
