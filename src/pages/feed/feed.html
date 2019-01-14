@@ -23,30 +23,41 @@
     <button block ion-button (click)="calculateFeed()">Calculate</button>
   </div>
 
+  <ion-card *ngIf="feedValue">
+      <ion-card-header>
+        Feed Calculation
+      </ion-card-header>
+      <ion-card-content>
+        <p>Cattle: {{this.silage}}, Months: {{this.cattle}}</p>
+        <p>Silage needed(in Tonnes): {{feedValue}}</p>
+        <p>Bales needed: {{this.baleValue}} </p>
+      </ion-card-content>
+    </ion-card>
+
   <ion-list>
     <!-- Bales calculator -->
     <ion-item>
       <ion-label floating>1st/2nd cut bales:</ion-label>
-      <ion-input type="number" [(ngModel)]="silage"></ion-input>
+      <ion-input type="number" [(ngModel)]="bales"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Surplus Bales: </ion-label>
-      <ion-input type="number" [(ngModel)]="cattle"></ion-input>
+      <ion-input type="number" [(ngModel)]="sBales"></ion-input>
     </ion-item>
   </ion-list>
   <div padding>
     <button block ion-button (click)="calculateBales()">Calculate</button>
   </div>
 
-  <ion-card *ngIf="feedValue">
-    <ion-card-header>
-      Feed Calculation
-    </ion-card-header>
-    <ion-card-content>
-      <p>Cattle: {{this.silage}}, Months: {{this.cattle}}</p>
-      <p>Silage needed(in Tonnes): {{feedValue}}</p>
-      <p>Bales needed: {{this.baleValue}} </p>
-    </ion-card-content>
-  </ion-card>
+  <ion-card *ngIf="baleAMT">
+      <ion-card-header>
+        Bales Calculation
+      </ion-card-header>
+      <ion-card-content>
+        <p>Bales: {{this.bales}}</p>
+        <p>Surplus: {{this.sBales}}</p>
+        <p>Bales in stock: {{baleAMT}}</p>
+      </ion-card-content>
+    </ion-card>
  
 </ion-content>

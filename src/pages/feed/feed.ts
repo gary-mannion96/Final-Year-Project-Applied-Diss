@@ -5,10 +5,19 @@ import { Component } from '@angular/core';
   templateUrl: 'feed.html'
 })
 export class FeedPage {
+  /*
+  Cattle
+  */
   cattle: number;
   silage: number;
   feedValue: number;
   baleValue: number;
+  /*
+  Bales
+  */
+  bales: number;
+  sBales: number;
+  baleAMT: number;
 
   constructor() {
   }
@@ -22,7 +31,10 @@ export class FeedPage {
   }
 
   calculateBales(){
-    
+    if(this.bales > 0 && this.sBales >= 0){
+      let finalBales = (this.bales * 0.8 + this.sBales * 0.8) / 0.9;
+      this.baleAMT = parseFloat(finalBales.toFixed(2));
+    }
   }
 
 }
