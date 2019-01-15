@@ -20,7 +20,9 @@ export class RegisterPage {
   async register(user: User){
     try{
     const result = await this.afAuth.auth.createUserWithEmailAndPassword(this.user.email, this.user.password);
-    console.log(result);
+    if(result){
+      this.navCtrl.setRoot('LoginPage');
+    }
   }
     catch (e){
       console.error(e);

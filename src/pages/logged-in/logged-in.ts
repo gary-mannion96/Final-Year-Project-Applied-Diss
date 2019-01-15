@@ -18,7 +18,7 @@ export class LoggedInPage {
     this.afAuth.authState.subscribe(data =>{
       if(data.email && data.uid){      
         this.toast.create({
-        message: 'Welcome to farm with ease, ${data.email}',
+        message: 'Welcome to Farm With Ease   ' + data.email,
         duration: 3000
       }).present();
       }
