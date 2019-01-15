@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { User } from '../../Models/user';
+import {menuPage} from '../../pages/MainMenu/menu'
 
 @IonicPage()
 @Component({
@@ -24,6 +25,10 @@ export class RegisterPage {
     catch (e){
       console.error(e);
     }
+  }
+
+  home(){
+    this.navCtrl.setRoot(menuPage);
   }
 
 }
