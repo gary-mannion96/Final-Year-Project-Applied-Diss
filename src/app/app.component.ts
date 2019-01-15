@@ -15,7 +15,8 @@ import { menuPage } from '../pages/MainMenu/menu';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = menuPage;
+  // First page on app start up
+  rootPage: any = 'LoginPage';
 
   pages: Array<{title: string, component: any}>;
 

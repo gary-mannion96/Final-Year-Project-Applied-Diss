@@ -8,10 +8,13 @@ import { FeedPage } from '../pages/feed/feed';
 import { medicinePage} from '../pages/medicine/medicine';
 import { AIPage } from '../pages/AI/ai';
 
+import { AngularFireModule} from "angularfire2";
+import { AngularFireAuthModule} from "angularfire2/auth";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { menuPage } from '../pages/MainMenu/menu';
+import { FIREBASE_CONFIG } from './app.firebase.config';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,8 @@ import { menuPage } from '../pages/MainMenu/menu';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
