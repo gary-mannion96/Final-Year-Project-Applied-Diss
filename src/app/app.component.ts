@@ -16,7 +16,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // First page on app start up
-  rootPage: any = 'LoginPage';
+  rootPage: any = menuPage;
 
   pages: Array<{title: string, component: any}>;
 
