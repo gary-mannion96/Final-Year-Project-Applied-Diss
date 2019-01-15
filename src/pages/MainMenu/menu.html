@@ -8,10 +8,12 @@
   </ion-header>
   
   <ion-content padding class='bg-image'>
-    <h3></h3>
-  
-    <p>
-      
-    </p>
-  
+    <ion-row>
+      <ion-col width-25 style="text-align: center; top: 300px">
+    <button class="boutton" ion-button color="secondary" round (click)="login(user)" block>Login</button>
+      </ion-col>
+    <ion-col width-25 style="text-align: center; top: 300px">
+    <button class="boutton" ion-button color="secondary" round (click)="register()" block>Register</button>
+  </ion-col>
+  </ion-row>
   </ion-content>
