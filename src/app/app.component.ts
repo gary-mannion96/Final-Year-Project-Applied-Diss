@@ -1,8 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
-import { App, Nav, Platform, ToastController, MenuController  } from 'ionic-angular';
+import { App, Nav, Platform, MenuController  } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { AngularFireAuth} from 'angularfire2/auth';
+
 
 import { taggingPage } from '../pages/tagging/tagging';
 import { FeedPage } from '../pages/feed/feed';
@@ -25,7 +25,7 @@ export class MyApp {
 
   pages: Array<{title: string, component: any, icon: string}>;
 
-  constructor(public menuCtrl: MenuController, public app: App, private afAuth: AngularFireAuth, private toast: ToastController, public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public menuCtrl: MenuController, public app: App,  public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
