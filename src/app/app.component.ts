@@ -18,7 +18,7 @@ export class MyApp {
   // First page on app start up
   rootPage: any = menuPage;
 
-  pages: Array<{title: string, component: any, openTab?: any}>;
+  pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
@@ -29,7 +29,7 @@ export class MyApp {
       { title: 'Tagging', component: taggingPage },
       { title: 'Feed', component: FeedPage },
       { title: 'Medicine', component: medicinePage},
-      { title: 'AI', component: AIPage, openTab: 1}
+      { title: 'AI', component: AIPage}
     ];
 
   }
