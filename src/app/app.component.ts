@@ -30,10 +30,10 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Tagging', component: taggingPage, icon:'' },
+      { title: 'Tagging', component: taggingPage, icon:'md-pricetag' },
       { title: 'Feed', component: FeedPage, icon:'md-calculator' },
-      { title: 'Medicine', component: medicinePage, icon:''},
-      { title: 'AI', component: AIPage, icon:''}
+      { title: 'Medicine', component: medicinePage, icon:'md-medical'},
+      { title: 'AI', component: AIPage, icon:'md-medkit'}
     ];
 
   }
