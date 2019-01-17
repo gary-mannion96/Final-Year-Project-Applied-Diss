@@ -1,13 +1,17 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { App, Nav, Platform, ToastController, MenuController  } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AngularFireAuth} from 'angularfire2/auth';
+//import { Storage } from '@ionic/storage';
+//import { AuthServiceProvider } from '../../providers/auth/auth-service';
 
 import { taggingPage } from '../pages/tagging/tagging';
 import { FeedPage } from '../pages/feed/feed';
 import { medicinePage } from '../pages/medicine/medicine';
 import { AIPage } from '../pages/AI/ai';
 import { menuPage } from '../pages/MainMenu/menu';
+import { User } from '../Models/user';
 
 @Component({
   templateUrl: 'app.html'
@@ -15,17 +19,19 @@ import { menuPage } from '../pages/MainMenu/menu';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
+  user = {} as User;
+
   // First page on app start up
   rootPage: any = menuPage;
+  email: string = '';
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public menuCtrl: MenuController, public app: App, /*ublic authService: AuthServiceProvider,*/ private afAuth: AngularFireAuth, private toast: ToastController, public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-    //  { title: 'Home', component: menuPage},
       { title: 'Tagging', component: taggingPage },
       { title: 'Feed', component: FeedPage },
       { title: 'Medicine', component: medicinePage},
@@ -48,4 +54,28 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
+
+  logoutClicked(user: User){
+    console.log("logout");
+    //this.authService.close();
+    this.menuCtrl.close();
+    var nav = this.app.getRootNav();
+    nav.setRoot(menuPage);
+  }
+
+  // logout(){
+  //   this.afAuth.auth.signOut(); {
+  //     //this.email = val;
+
+  //     this.toast.create({
+  //       message: "Successfully Logged Out " + this.email,
+  //       duration: 3000     
+  //     }).present();
+
+  //   });
+    
+  //   this.nav.setRoot(menuPage);
+ 
+   
+  // }
 }
