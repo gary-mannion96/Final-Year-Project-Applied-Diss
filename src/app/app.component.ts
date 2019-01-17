@@ -3,8 +3,6 @@ import { App, Nav, Platform, ToastController, MenuController  } from 'ionic-angu
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireAuth} from 'angularfire2/auth';
-//import { Storage } from '@ionic/storage';
-//import { AuthServiceProvider } from '../../providers/auth/auth-service';
 
 import { taggingPage } from '../pages/tagging/tagging';
 import { FeedPage } from '../pages/feed/feed';
@@ -23,19 +21,19 @@ export class MyApp {
 
   // First page on app start up
   rootPage: any = menuPage;
-  email: string = '';
+ 
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}>;
 
-  constructor(public menuCtrl: MenuController, public app: App, /*ublic authService: AuthServiceProvider,*/ private afAuth: AngularFireAuth, private toast: ToastController, public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public menuCtrl: MenuController, public app: App, private afAuth: AngularFireAuth, private toast: ToastController, public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Tagging', component: taggingPage },
-      { title: 'Feed', component: FeedPage },
-      { title: 'Medicine', component: medicinePage},
-      { title: 'AI', component: AIPage}
+      { title: 'Tagging', component: taggingPage, icon:'' },
+      { title: 'Feed', component: FeedPage, icon:'md-calculator' },
+      { title: 'Medicine', component: medicinePage, icon:''},
+      { title: 'AI', component: AIPage, icon:''}
     ];
 
   }
@@ -62,20 +60,4 @@ export class MyApp {
     var nav = this.app.getRootNav();
     nav.setRoot(menuPage);
   }
-
-  // logout(){
-  //   this.afAuth.auth.signOut(); {
-  //     //this.email = val;
-
-  //     this.toast.create({
-  //       message: "Successfully Logged Out " + this.email,
-  //       duration: 3000     
-  //     }).present();
-
-  //   });
-    
-  //   this.nav.setRoot(menuPage);
- 
-   
-  // }
 }
