@@ -18,7 +18,7 @@ import { User} from "../../Models/user";
       this.navCtrl.push('RegisterPage');
     }
     login(user){
-      this.navCtrl.push('LoggedInPage');
+      this.navCtrl.setRoot('LoggedInPage');
     }
 
     googleLogin(){
