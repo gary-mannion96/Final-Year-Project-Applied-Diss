@@ -21,6 +21,6 @@ import { User} from "../../Models/user";
       this.navCtrl.setRoot('LoggedInPage');
     }
 
-    googleLogin(){
-    }
+    // googleLogin(){
+    // }
   }
