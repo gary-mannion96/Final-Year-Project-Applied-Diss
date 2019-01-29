@@ -4,20 +4,24 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Medicine</ion-title>
+    <ion-buttons end>
+      <button ion-button color="secondary">
+          <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
+    <ion-item *ngFor="let medicine of medicines">
+      {{medicine.name}}
+      <p>
+        ID: {{medicine.id}}
+      </p>
+      <p>
+        Dosage: {{medicine.dosage}}
+      </p>
+    </ion-item>
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
 </ion-content>
