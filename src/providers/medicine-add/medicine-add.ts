@@ -89,12 +89,14 @@ export class MedicineAddProvider {
 
   }
 
-  createMedicine(){
-
+  createMedicine(medicine){
+    this.db.post(medicine);
   }
 
   deleteMedicine(medicine){
-    
+    this.db.remove(medicine).catch(Error); {
+      console.log(Error);
+    }
   }
 
 }
