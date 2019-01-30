@@ -29,4 +29,35 @@ export class MedicineAddProvider {
     this.data.sync(this.remote, options);
   }
 
+  getMedicine(){
+    if(this.data){
+      return Promise.resolve(this.data);
+    }
+
+    return new Promise(resolve => {
+      this.db.allDocs({
+
+        include_docs: true
+      }).then((result) => {
+        this.data = [];
+
+        result.rows.map((row) => {
+          this.data.push(row.doc);
+        });
+
+        resolve(this.data);
+
+        this.db.changes({live:true, since: 'now', include_docs: true}).on('change', (change) => {
+          this.handleChange(change);
+        });
+      }).catch((error) => {
+        console.log(error);
+      });
+    });
+  }
+
+  handleChange(change){
+
+  }
+
 }
