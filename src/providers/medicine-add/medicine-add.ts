@@ -57,6 +57,37 @@ export class MedicineAddProvider {
   }
 
   handleChange(change){
+    let changedDoc = null;
+    let changedIndex = null;
+
+    this.data.forEach((doc, index) => {
+
+      if(doc._id === change.id){
+        changedDoc = doc;
+        changedIndex = index;
+      }
+
+    });
+
+    // Delete
+    if(change.deleted){
+      this.data.splice(changedIndex, 1);
+    }
+    else {
+
+    // Update
+    if(changedDoc){
+      this.data[changedIndex] = change.doc;
+    }
+
+    // Added
+    else {
+      this.data.push(change.doc);
+    }
+
+    }
+
+  }
 
   }
 
