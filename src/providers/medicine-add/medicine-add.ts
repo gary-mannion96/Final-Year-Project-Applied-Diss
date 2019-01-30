@@ -26,7 +26,7 @@ export class MedicineAddProvider {
       continous: true
     };
 
-    this.data.sync(this.remote, options);
+   // this.data.sync(this.remote, options);
   }
 
   getMedicine(){

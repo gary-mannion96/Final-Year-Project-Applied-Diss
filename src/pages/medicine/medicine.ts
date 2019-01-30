@@ -1,56 +1,45 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController } from 'ionic-angular';
-import PouchDB from 'pouchdb';
+//import PouchDB from 'pouchdb';
+import { MedicineAddProvider } from '../../providers/medicine-add/medicine-add';
+
 
 @Component({
   selector: 'page-medicine',
   templateUrl: 'medicine.html'
 })
 export class medicinePage {
-  private medicines;
+  medicine: any;
 
-  private db;
-
-  constructor(public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public medicineService: MedicineAddProvider,public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
  
   }
 
-  ionViewDidEnter(){
-   this.refresh();
-  }
+  createMedicine(){
 
-  refresh(){
-    this.medicines = [];
-    this.medicines.push({
-      name: 'Aminoral',
-      id: '1234567',
-      dosage: '10ml'
-    });
-  }
-
-  createNew(){
     let prompt = this.alertCtrl.create({
-      title: 'Enter Medicine Details',
-        // all the details to input into user trips
-        inputs: [
-            {
-                name: 'name',
-                placeholder: "Medicine Name"
-            }
-        ],
-         // buttons at the end of the form (Cancel, Create)
-         buttons: [
-          {
-              text: "Cancel"
-          }, // end Cancel
-          {
-              text: "Create Medicine"
-            
-          } // end create
-      ] // end buttons
+      title: 'Medicine',
+      message: '',
+      inputs: [
+        {
+          name: 'title'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancel'
+        },
+        {
+          text: 'Save',
+          handler: data => {
+            this.medicineService.createMedicine({name: data.name});
+          }
+        }
+      ]
     });
 
     prompt.present();
+
   }
  
 }
