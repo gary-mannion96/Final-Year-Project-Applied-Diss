@@ -14,6 +14,11 @@ export class medicinePage {
   constructor(public medicineService: MedicineAddProvider,public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
  
   }
+  ionViewLoaded(){
+    this.medicineService.getMedicine().then((data) => {
+    this.medicine = data;
+    });
+    }
 
   createMedicine(){
 

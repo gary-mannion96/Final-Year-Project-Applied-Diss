@@ -2,12 +2,6 @@
 import { Injectable } from '@angular/core';
 import PouchDB from 'pouchdb';
 
-/*
-  Generated class for the MedicineAddProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class MedicineAddProvider {
 
@@ -26,7 +20,7 @@ export class MedicineAddProvider {
       continous: true
     };
 
-   // this.data.sync(this.remote, options);
+    this.data.allDocs(this.remote, options);
   }
 
   getMedicine(){
