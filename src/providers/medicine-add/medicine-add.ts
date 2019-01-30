@@ -11,7 +11,22 @@ import PouchDB from 'pouchdb';
 @Injectable()
 export class MedicineAddProvider {
 
+  data: any;
+  db: any;
+  remote: any;
+
   constructor() {
+    this.db = new PouchDB('medicine');
+
+    this.remote = 'http://localhost:5984/medicine';
+
+    let options = {
+      live: true,
+      retry: true,
+      continous: true
+    };
+
+    this.data.sync(this.remote, options);
   }
 
 }
