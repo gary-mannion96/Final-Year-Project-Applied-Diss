@@ -16,6 +16,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { menuPage } from '../pages/MainMenu/menu';
 import { FIREBASE_CONFIG } from './app.firebase.config';
 
+import { MedicineAddProvider } from '../providers/medicine-add/medicine-add';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -43,7 +45,9 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    
+    MedicineAddProvider
   ]
 })
 export class AppModule {}

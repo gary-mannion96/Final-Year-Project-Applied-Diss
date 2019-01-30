@@ -25,6 +25,7 @@
     "@ionic-native/status-bar": "~4.17.0",
     "@ionic/pro": "2.0.3",
     "@ionic/storage": "2.2.0",
+    "@types/pouchdb": "6.3.2",
     "angularfire2": "^5.1.1",
     "firebase": "^5.7.3",
     "ionic-angular": "3.9.2",
