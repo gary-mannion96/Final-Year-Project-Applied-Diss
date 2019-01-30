@@ -89,6 +89,12 @@ export class MedicineAddProvider {
 
   }
 
+  createMedicine(){
+
+  }
+
+  deleteMedicine(medicine){
+    
   }
 
 }
