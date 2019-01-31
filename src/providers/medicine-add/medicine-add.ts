@@ -1,7 +1,7 @@
-//import { HttpClient } from '@angular/common/http';
+//import { Http } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import PouchDB from 'pouchdb';
-//import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class MedicineAddProvider {
@@ -10,7 +10,7 @@ export class MedicineAddProvider {
   db: any;
   remote: any;
 
-  constructor() {
+  constructor(/*public http: Http*/) {
     this.db = new PouchDB('medicine');
 
     this.remote = 'http://localhost:5984/medicine';
@@ -36,7 +36,7 @@ export class MedicineAddProvider {
       }).then((result) => {
         this.data = [];
 
-        result.rows.map((row) => {
+        let docs = result.rows.map((row) => {
           this.data.push(row.doc);
         });
 

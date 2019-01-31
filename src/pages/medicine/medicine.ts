@@ -11,6 +11,8 @@ import { MedicineAddProvider } from '../../providers/medicine-add/medicine-add';
 export class medicinePage {
   medicines: any;
 
+ // medName: any;
+
   constructor(public medicineService: MedicineAddProvider,public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
  
   }
@@ -28,7 +30,8 @@ export class medicinePage {
       inputs: [
         {
           name: 'name',
-          placeholder: "Medicine Name"
+          placeholder: 'Name'
+          //placeholder: "Medicine Name"
         }
       ],
       buttons: [
