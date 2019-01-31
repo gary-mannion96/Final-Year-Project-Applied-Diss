@@ -30,13 +30,16 @@ export class MedicineAddProvider {
     }
 
     return new Promise(resolve => {
-      this.db.allDocs({
+
+      this.db.allDocs({ // error here
+
         include_docs: true
 
       }).then((result) => {
+
         this.data = [];
 
-        let docs = result.rows.map((row) => {
+        result.rows.map((row) => {
           this.data.push(row.doc);
         });
 
