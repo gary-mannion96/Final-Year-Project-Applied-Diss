@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController } from 'ionic-angular';
-//import PouchDB from 'pouchdb';
+
 import { MedicineAddProvider } from '../../providers/medicine-add/medicine-add';
 
 
@@ -14,6 +14,7 @@ export class medicinePage {
   constructor(public medicineService: MedicineAddProvider,public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
  
   }
+  
   ionViewLoaded(){
     this.medicineService.getMedicine().then((data) => {
     this.medicine = data;

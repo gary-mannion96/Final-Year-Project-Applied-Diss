@@ -1,6 +1,7 @@
 //import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import PouchDB from 'pouchdb';
+//import 'rxjs/add/operator/map';
 
 @Injectable()
 export class MedicineAddProvider {
@@ -20,7 +21,7 @@ export class MedicineAddProvider {
       continous: true
     };
 
-    this.data.allDocs(this.remote, options);
+    this.db.sync(this.remote, options);
   }
 
   getMedicine(){
@@ -88,9 +89,7 @@ export class MedicineAddProvider {
   }
 
   deleteMedicine(medicine){
-    this.db.remove(medicine).catch(Error); {
-      console.log(Error);
-    }
+    this.db.remove(medicine);
   }
 
 }
