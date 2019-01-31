@@ -31,8 +31,8 @@ export class MedicineAddProvider {
 
     return new Promise(resolve => {
       this.db.allDocs({
-
         include_docs: true
+
       }).then((result) => {
         this.data = [];
 
