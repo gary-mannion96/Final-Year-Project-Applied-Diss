@@ -25,10 +25,10 @@ export class medicinePage {
 
     let prompt = this.alertCtrl.create({
       title: 'Medicine',
-      message: '',
       inputs: [
         {
-          name: 'name'
+          name: 'name',
+          placeholder: "Medicine Name"
         }
       ],
       buttons: [
