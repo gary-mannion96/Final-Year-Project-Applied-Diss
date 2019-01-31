@@ -14,13 +14,13 @@
 
 <ion-content>
 
-  <ion-list no-lines>
-
-    <ion-item-sliding *ngFor="let medicine of medicine">
+  <ion-list no-lines> 
+<!-- no-lines^ -->
+    <ion-item-sliding *ngFor="let medicine of medicines">
 
       <ion-item>
 
-        {{medicine.title}}
+        {{medicine.name}}
 
       </ion-item>
 
@@ -28,7 +28,7 @@
         <button ion-button icon-only color="light">
           <ion-icon name="create"></ion-icon>
         </button>
-        <button ion-button icon-only color="primary">
+        <button ion-button icon-only color="primary" (click)="deleteMedicine(medicine)">
           <ion-icon name="checkmark"></ion-icon>
         </button>
       </ion-item-options>

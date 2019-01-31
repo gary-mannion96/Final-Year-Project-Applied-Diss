@@ -9,7 +9,7 @@ import { MedicineAddProvider } from '../../providers/medicine-add/medicine-add';
   templateUrl: 'medicine.html'
 })
 export class medicinePage {
-  medicine: any;
+  medicines: any;
 
   constructor(public medicineService: MedicineAddProvider,public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
  
@@ -17,9 +17,9 @@ export class medicinePage {
   
   ionViewLoaded(){
     this.medicineService.getMedicine().then((data) => {
-    this.medicine = data;
+    this.medicines = data;
     });
-    }
+  }
 
   createMedicine(){
 
@@ -28,7 +28,7 @@ export class medicinePage {
       message: '',
       inputs: [
         {
-          name: 'title'
+          name: 'name'
         }
       ],
       buttons: [
@@ -46,6 +46,10 @@ export class medicinePage {
 
     prompt.present();
 
+  }
+
+  deleteMedicine(medicine){
+    this.medicineService.deleteMedicine(medicine);
   }
  
 }
