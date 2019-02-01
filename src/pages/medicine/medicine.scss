@@ -9,19 +9,12 @@ page-medicine {
         height: 100%;
         text-align: center;
       }
-
-    .bg-image{
-        background-image: url('../../assets/img/silage1.jpg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-    }
   
-    // .scroll-content {
-    //     background-color: whitesmoke;
-    //     display: flex !important;
-    //     justify-content: center;
-    //   }
+     .scroll-content {
+         background-color: whitesmoke;
+         display: flex !important;
+         justify-content: center;
+       }
   
     ion-list {
         width: 90%;
@@ -36,8 +29,4 @@ page-medicine {
         border: none !important;
         font-weight: bold !important;
       }
-
-    //    ion-icon{
-    //      color: secondary;
-    //    }
 }

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController } from 'ionic-angular';
-
 import { MedicineAddProvider } from '../../providers/medicine-add/medicine-add';
 
 

@@ -1,4 +1,3 @@
-//import { Http } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import PouchDB from 'pouchdb';
 import 'rxjs/add/operator/map';
