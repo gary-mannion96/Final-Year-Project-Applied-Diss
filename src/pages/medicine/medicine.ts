@@ -11,16 +11,16 @@ import { MedicineAddProvider } from '../../providers/medicine-add/medicine-add';
 export class medicinePage {
   medicines: any;
 
- // medName: any;
-
   constructor(public medicineService: MedicineAddProvider,public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
  
   }
   
-  ionViewLoaded(){
+  ionViewDidLoad(){
+
     this.medicineService.getMedicine().then((data) => {
-    this.medicines = data;
+      this.medicines = data;
     });
+
   }
 
   createMedicine(){
@@ -31,7 +31,6 @@ export class medicinePage {
         {
           name: 'name',
           placeholder: 'Name'
-          //placeholder: "Medicine Name"
         }
       ],
       buttons: [

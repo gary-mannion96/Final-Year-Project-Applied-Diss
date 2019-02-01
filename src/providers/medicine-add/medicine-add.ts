@@ -10,7 +10,7 @@ export class MedicineAddProvider {
   db: any;
   remote: any;
 
-  constructor(/*public http: Http*/) {
+  constructor() {
     this.db = new PouchDB('medicine');
 
     this.remote = 'http://localhost:5984/medicine';
@@ -25,13 +25,14 @@ export class MedicineAddProvider {
   }
 
   getMedicine(){
-    if(this.data){
+
+    if (this.data) {
       return Promise.resolve(this.data);
     }
 
     return new Promise(resolve => {
 
-      this.db.allDocs({ // error here
+      this.db.allDocs({
 
         include_docs: true
 
@@ -45,14 +46,20 @@ export class MedicineAddProvider {
 
         resolve(this.data);
 
-        this.db.changes({live:true, since: 'now', include_docs: true}).on('change', (change) => {
+        this.db.changes({live: true, since: 'now', include_docs: true}).on('change', (change) => {
           this.handleChange(change);
         });
+
       }).catch((error) => {
+
         console.log(error);
+
       });
+
     });
+
   }
+
 
   handleChange(change){
     let changedDoc = null;
