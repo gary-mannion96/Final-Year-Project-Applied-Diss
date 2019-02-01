@@ -30,6 +30,10 @@ export class medicinePage {
         {
           name: 'name',
           placeholder: 'Name'
+        },
+        {
+          name: 'date',
+          placeholder: 'Date used'
         }
       ],
       buttons: [
@@ -39,7 +43,7 @@ export class medicinePage {
         {
           text: 'Save',
           handler: data => {
-            this.medicineService.createMedicine({name: data.name});
+            this.medicineService.createMedicine({name: data.name, date: data.date});
           }
         }
       ]

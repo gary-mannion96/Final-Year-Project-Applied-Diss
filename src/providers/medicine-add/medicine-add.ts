@@ -10,9 +10,9 @@ export class MedicineAddProvider {
   remote: any;
 
   constructor() {
-    this.db = new PouchDB('medicine');
+    this.db = new PouchDB('medicines');
 
-    this.remote = 'http://localhost:5984/medicine';
+    this.remote = 'http://localhost:5984/medicines';
 
     let options = {
       live: true,
