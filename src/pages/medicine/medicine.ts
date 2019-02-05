@@ -10,9 +10,7 @@ import { MedicineAddProvider } from '../../providers/medicine-add/medicine-add';
 export class medicinePage {
   medicines: any;
 
-  descending: boolean = false;
-order: number;
-column: string = 'name';
+  column: string = 'name';
 
   constructor(public medicineService: MedicineAddProvider,public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
     
@@ -25,10 +23,7 @@ column: string = 'name';
     });
 
   }
-  sort(){
-    this.descending = !this.descending;
-    this.order = this.descending ? 1 : -1;
-  }
+  
  
  
   createMedicine(){

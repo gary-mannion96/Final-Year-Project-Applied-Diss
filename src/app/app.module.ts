@@ -17,7 +17,7 @@ import { menuPage } from '../pages/MainMenu/menu';
 import { FIREBASE_CONFIG } from './app.firebase.config';
 
 import { SearchPipe } from '../pipes/search/search';
-import { SortPipe } from '../pipes/sort/sort';
+
 
 import { MedicineAddProvider } from '../providers/medicine-add/medicine-add';
 
@@ -29,8 +29,7 @@ import { MedicineAddProvider } from '../providers/medicine-add/medicine-add';
     medicinePage,
     AIPage,
     menuPage,
-    SearchPipe,
-    SortPipe
+    SearchPipe
   ],
   imports: [
     BrowserModule,
