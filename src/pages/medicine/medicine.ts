@@ -36,8 +36,8 @@ export class medicinePage {
           placeholder: 'Medicine bottle name'
         },
         {
-          name: 'Dosage',
-          placeholder: "Amount used"
+          name: 'dosage',
+          placeholder: "Amount used (ML)"
         },
         {
           name: 'date',
@@ -55,7 +55,13 @@ export class medicinePage {
         {
           text: 'Save',
           handler: data => {
-            this.medicineService.createMedicine({tagNum: data.tagNum, date: data.date});
+            this.medicineService.createMedicine({
+              tagNum: data.tagNum, 
+              date: data.date, 
+              name: data.name, 
+              dosage: data.dosage,
+              reason: data.reason
+            });
           }
         }
       ]
