@@ -10,8 +10,12 @@ import { MedicineAddProvider } from '../../providers/medicine-add/medicine-add';
 export class medicinePage {
   medicines: any;
 
+  descending: boolean = false;
+order: number;
+column: string = 'name';
+
   constructor(public medicineService: MedicineAddProvider,public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
- 
+    
   }
   
   ionViewDidLoad(){
@@ -21,7 +25,12 @@ export class medicinePage {
     });
 
   }
-
+  sort(){
+    this.descending = !this.descending;
+    this.order = this.descending ? 1 : -1;
+  }
+ 
+ 
   createMedicine(){
 
     let prompt = this.alertCtrl.create({
