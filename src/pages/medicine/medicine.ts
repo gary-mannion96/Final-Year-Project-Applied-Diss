@@ -28,12 +28,24 @@ export class medicinePage {
       title: 'Medicine',
       inputs: [
         {
+          name: 'tagNum',
+          placeholder: 'Tag Number'
+        },
+        {
           name: 'name',
-          placeholder: 'Name'
+          placeholder: 'Medicine bottle name'
+        },
+        {
+          name: 'Dosage',
+          placeholder: "Amount used"
         },
         {
           name: 'date',
           placeholder: 'Date used'
+        },
+        {
+          name: 'reason',
+          placeholder: 'Reason'
         }
       ],
       buttons: [
@@ -43,7 +55,7 @@ export class medicinePage {
         {
           text: 'Save',
           handler: data => {
-            this.medicineService.createMedicine({name: data.name, date: data.date});
+            this.medicineService.createMedicine({tagNum: data.tagNum, date: data.date});
           }
         }
       ]
