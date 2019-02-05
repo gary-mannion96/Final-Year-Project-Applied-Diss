@@ -18,16 +18,14 @@
     <ion-item-sliding *ngFor="let medicine of medicines">
 
       <ion-item>
-
-       <p>Name: {{medicine.name}}</p>
-       <p>Date Used: {{medicine.date}}</p>
-
+        <p>Tag Number: {{medicine.tagNum}}</p>
+        <p>Bottle Name: {{medicine.name}}</p>
+        <p>Dosage: {{medicine.dosage}}</p>
+        <p>Date Used: {{medicine.date}}</p>
+        <p>Reason used: {{medicine.reason}}</p>
       </ion-item>
 
       <ion-item-options>
-        <!-- <button ion-button icon-only color="light">
-          <ion-icon name="create"></ion-icon>
-        </button> -->
         <button ion-button icon-only color="danger" (click)="deleteMedicine(medicine)">
           <ion-icon name="trash"></ion-icon>
         </button>
