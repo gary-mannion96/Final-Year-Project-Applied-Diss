@@ -13,9 +13,9 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content> 
   <ion-list no-lines>
-  <ion-searchbar placeholder="Search Medicine"[(ngModel)]="terms"></ion-searchbar>
+  <ion-searchbar placeholder="Search Medicine" [(ngModel)]="terms"></ion-searchbar>
     
   
     <ion-item-sliding *ngFor="let medicine of medicines | search : terms">
