@@ -1,7 +1,7 @@
 # Final-Year-Project-Applied-Diss
 4th year Software Development Final Year Project
 
-## [Contents](#contents)
+## Contents
 * [Project Details](#details)
 * [Introduction](#intro)
 * [Video Demo](#demo)
