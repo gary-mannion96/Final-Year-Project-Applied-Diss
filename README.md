@@ -1,9 +1,6 @@
 # Final-Year-Project-Applied-Diss
 4th year Software Development Final Year Project
 
-<p align="center"><img src="https://github.com/Gazza1996/Final-Year-Project-Applied-Diss/blob/master/Images/Cows.jpg" width="250" height="250"></p>
-
-
 ## [Contents](#contents)
 * [Project Details](#details)
 * [Introduction](#intro)
@@ -65,17 +62,16 @@ The following is an overview of the Technologies/Architecture used creating Farm
 
 # Features<a name = "features"></a>
 The following are the main features of our project:
-* Users has option for four areas AI, Medicines, Tagging, Feed.
-* Users can update delete in any of the four areas
-* Users can search tags.
-* Logged in users can create their own notice Board add ads for the app
-* Logged in users can post their own messages on the Farm At Ease Notic Board
-* Logged in users can view messages they have created
-* Logged in users can edit and delete messages they have created
 * Users can create their own Account
 * Users can Log into their Account
 * Users can reset their password if they have forgotten theirs
-
+* Users has option for four areas AI, Medicines, Tagging, Feed.
+* Users can update and delete but only in certain parts of a section.
+* Users can search medicines and tags.
+* Logged in users can create their own notice Board ads for the app
+* Logged in users can post their own messages on the Farm At Ease Notice Board
+* Logged in users can view messages they have created
+* Logged in users can edit and delete messages they have created
 
 [Top](#contents) 
 
