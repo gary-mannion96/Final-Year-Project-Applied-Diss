@@ -59,6 +59,7 @@ The following is an overview of the Technologies/Architecture used creating Farm
 
 ### Data Tier
 * [MongoDB](https://www.mongodb.com/company) Database 
+* [CouchDB](http://couchdb.apache.org/) Database
 
 [Top](#contents) 
 
