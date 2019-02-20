@@ -26,7 +26,7 @@
 [Top](#contents) 
 
 # Introduction<a name = "intro"></a>
-For our final year project, we decided to create a Farming App called Farm At Ease, specifically for young farmers. Currently there is a farming crisis across Ireland and we felt an App like ours was badly needed.  Working as a team and following an agile methodology we developed an App that allows users to view to keep track of animals dosing, AI, calf Tagging and be able to measure how much feed you have for the stock for the winter months ahead.  Adding these specific features will help young farmer in everyday life to reduce stress and depression that young farmer face in every day.  We created a 3-tier application, using Mongo Db and Firebase as the our Data Tier, NodeJS for our Logic Tier and Ionic 3 for our Presentation Tier.  
+For our final year project, we decided to create a Farming App called Farm At Ease, specifically for young farmers. Currently there is a farming crisis across Ireland and we felt an App like ours was badly needed.  Working as a team and following an agile methodology we developed an App that allows users to view to keep track of animals dosing, AI, calf Tagging and be able to measure how much feed you have for the stock for the winter months ahead.  Adding these specific features will help young farmer in everyday life to reduce stress and depression that young farmer face in every day.  We created a 3-tier application, using Mongo Db and CouchDB as the our Data Tier, NodeJS for our Logic Tier and Ionic 3 for our Presentation Tier which we used FireBase Authentication for our login/register section.  
 
 
 [Top](#contents) 
