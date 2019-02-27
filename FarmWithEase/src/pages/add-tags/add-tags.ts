@@ -17,6 +17,7 @@ export class AddTagsPage {
 
   tagNumber: any;
   description: any;
+  DOB: any;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
@@ -27,6 +28,7 @@ export class AddTagsPage {
     let review = {
       tagNumber: this.tagNumber,
       description: this.description,
+      DOB: this.DOB
     };
 
     this.viewCtrl.dismiss(review);
