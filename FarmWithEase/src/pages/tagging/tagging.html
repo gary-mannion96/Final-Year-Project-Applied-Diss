@@ -7,7 +7,24 @@
   </ion-navbar>
 </ion-header>
 
+<ion-content>
 
+  <ion-list no-lines>
+
+    <ion-item-sliding *ngFor="let tag of tags">
+
+      <ion-item>
+
+        <p>{{tag.tagNumber}}</p>
+        <p>{{tag.description}}</p>
+
+      </ion-item>
+
+    </ion-item-sliding>
+
+  </ion-list>
+
+</ion-content>
 <ion-content padding>
   <h3>Farm With Ease</h3>
 
