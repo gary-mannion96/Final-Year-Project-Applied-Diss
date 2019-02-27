@@ -32,6 +32,18 @@ export class TaggingProvider {
           });
       });
 
+
+    }
+    createTags(tag){
+
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+
+      this.http.post('http://localhost:8080/api/tags', JSON.stringify(tag), {headers: headers})
+        .subscribe(res => {
+          console.log(res.json());
+        });
+
     }
 
 
