@@ -57,7 +57,7 @@ import { AddTagsPage } from '../pages/add-tags/add-tags';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
 
-    MedicineAddProvider
+    MedicineAddProvider,
     TaggingProvider
   ]
 })
