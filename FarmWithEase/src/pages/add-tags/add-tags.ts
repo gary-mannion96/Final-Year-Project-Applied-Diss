@@ -16,7 +16,7 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 export class AddTagsPage {
 
   tagNumber: any;
-
+  description: any;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
@@ -26,6 +26,7 @@ export class AddTagsPage {
 
     let review = {
       tagNumber: this.tagNumber,
+      description: this.description,
     };
 
     this.viewCtrl.dismiss(review);

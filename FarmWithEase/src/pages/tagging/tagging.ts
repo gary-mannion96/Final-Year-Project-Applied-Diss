@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
 import { AddTagsPage } from '../add-tags/add-tags';
 import { TaggingProvider } from '../../providers/tagging/tagging';
 
@@ -9,7 +9,35 @@ import { TaggingProvider } from '../../providers/tagging/tagging';
 })
 export class taggingPage {
 
-  constructor(public navCtrl: NavController) {
+  tags: any [] = [];
+
+  constructor(public navCtrl: NavController, public taggingService: TaggingProvider, public modalCtrl: ModalController) {
+
+  }
+  ionViewDidLoad(){
+
+    this.taggingService.getTags().then((data) => {
+      console.log(data);
+      this.tags = data;
+    });
+
+  }
+
+  addTag(){
+
+    let modal = this.modalCtrl.create(AddTagsPage);
+
+    modal.onDidDismiss(tag => {
+      if(tag){
+        this.tags.push(tag);
+
+      }
+    });
+
+    modal.present();
+
+  }
+
 
   }
 
