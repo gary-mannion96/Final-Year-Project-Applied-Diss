@@ -32,8 +32,8 @@ export class TaggingProvider {
           });
       });
 
-
     }
+
     createTags(tag){
 
       let headers = new Headers();
@@ -46,8 +46,12 @@ export class TaggingProvider {
 
     }
 
+    deleteTags(id){
 
+      this.http.delete('http://localhost:8080/api/tags/' + id).subscribe((res) => {
+        console.log(res.json());
+      });
 
-
+    }
 
 }

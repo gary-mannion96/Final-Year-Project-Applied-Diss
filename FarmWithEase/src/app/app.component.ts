@@ -21,7 +21,7 @@ export class MyApp {
 
   // First page on app start up
   rootPage: any = menuPage;
- 
+
 
   pages: Array<{title: string, component: any, icon: string}>;
 

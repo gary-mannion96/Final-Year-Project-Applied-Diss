@@ -30,7 +30,7 @@ export class taggingPage {
     modal.onDidDismiss(tag => {
       if(tag){
         this.tags.push(tag);
-
+        this.taggingService.createTags(tag);
       }
     });
 
@@ -47,7 +47,8 @@ export class taggingPage {
         this.tags.splice(index, 1);
       }
 
-
+    //Remove from database
+    this.taggingService.deleteTags(tag._id);
   }
 
 }
