@@ -20,8 +20,9 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
 
 import { SearchPipe } from '../pipes/search/search';
 
-
 import { MedicineAddProvider } from '../providers/medicine-add/medicine-add';
+//import { TaggingProvider } from '../providers/tagging/tagging';
+import { AddTagsPage } from '../pages/add-tags/add-tags';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MedicineAddProvider } from '../providers/medicine-add/medicine-add';
     medicinePage,
     AIPage,
     menuPage,
-    SearchPipe
+    SearchPipe,
+    AddTagsPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { MedicineAddProvider } from '../providers/medicine-add/medicine-add';
     FeedPage,
     medicinePage,
     AIPage,
-    menuPage
+    menuPage,
+    AddTagsPage
   ],
   providers: [
     StatusBar,
