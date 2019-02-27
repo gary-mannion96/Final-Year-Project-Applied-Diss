@@ -21,7 +21,7 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
 import { SearchPipe } from '../pipes/search/search';
 
 import { MedicineAddProvider } from '../providers/medicine-add/medicine-add';
-//import { TaggingProvider } from '../providers/tagging/tagging';
+import { TaggingProvider } from '../providers/tagging/tagging';
 import { AddTagsPage } from '../pages/add-tags/add-tags';
 
 @NgModule({
@@ -58,6 +58,7 @@ import { AddTagsPage } from '../pages/add-tags/add-tags';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
 
     MedicineAddProvider
+    TaggingProvider
   ]
 })
 export class AppModule {}
