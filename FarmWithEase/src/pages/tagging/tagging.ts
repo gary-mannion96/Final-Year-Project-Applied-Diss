@@ -38,6 +38,14 @@ export class taggingPage {
 
   }
 
+  deleteTag(tag){
+
+    //Remove locally
+      let index = this.tags.indexOf(tag);
+
+      if(index > -1){
+        this.tags.splice(index, 1);
+      }
 
 
   }
