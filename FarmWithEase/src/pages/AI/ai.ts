@@ -1,18 +1,36 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
+import { AddAisPage } from '../add-ais/add-ais';
+import { AiingProvider } from '../../providers/ai/aiing';
 
 @Component({
-  selector: 'page-ai',
+  selector: 'page-AI',
   templateUrl: 'ai.html'
 })
 export class AIPage {
-  tab1 = 'CowPage';
-  tab2 = 'BullPage';
+  ais: any [] = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-}
+  constructor(public navCtrl: NavController, public aiingService: AiingProvider, public modalCtrl: ModalController) {
 
-  ionViewDidLoad(){
-    console.log('ionViewDidLoad AIPage');
   }
+
+
+  }
+
+  addAi(){
+
+    let modal = this.modalCtrl.create(AddAisPage);
+
+    modal.onDidDismiss(ai => {
+      if(ai){
+        this.ais.push(ai);
+        this.aiingService.createAis(ai);
+      }
+    });
+
+    modal.present();
+
+  }
+
+
 }
