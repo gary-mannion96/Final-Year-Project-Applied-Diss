@@ -1,16 +1,30 @@
 <ion-header>
   <ion-navbar color="primary">
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>AI</ion-title>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Add AI</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addAi()"><ion-icon name="add"></ion-icon></button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
-<ion-content>
-  
-</ion-content>
-<ion-tabs>
-  <ion-tab tabIcon="ios-female" tabTitle="Cow" [root]="tab1"></ion-tab>
-  <ion-tab tabIcon="ios-male" tabTitle="Bull" [root]="tab2"></ion-tab>
-</ion-tabs>
 
+<ion-content>
+
+  <ion-list no-lines>
+
+    <ion-item-sliding *ngFor="let ai of ais">
+
+      <ion-item>
+
+        <p>{{ai.aiTagNumber}}</p>
+
+      </ion-item>
+
+
+    </ion-item-sliding>
+
+  </ion-list>
+
+</ion-content>
