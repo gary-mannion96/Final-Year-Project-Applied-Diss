@@ -21,8 +21,12 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
 import { SearchPipe } from '../pipes/search/search';
 
 import { MedicineAddProvider } from '../providers/medicine-add/medicine-add';
+//Tagging
 import { TaggingProvider } from '../providers/tagging/tagging';
 import { AddTagsPage } from '../pages/add-tags/add-tags';
+//AI
+import { AiingProvider } from '../providers/ai/aiing';
+import { AddAisPage } from '../pages/add-ais/add-ais';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,8 @@ import { AddTagsPage } from '../pages/add-tags/add-tags';
     AIPage,
     menuPage,
     SearchPipe,
-    AddTagsPage
+    AddTagsPage,
+    AddAisPage
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,8 @@ import { AddTagsPage } from '../pages/add-tags/add-tags';
     medicinePage,
     AIPage,
     menuPage,
-    AddTagsPage
+    AddTagsPage,
+    AddAisPage
   ],
   providers: [
     StatusBar,
@@ -58,7 +64,8 @@ import { AddTagsPage } from '../pages/add-tags/add-tags';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
 
     MedicineAddProvider,
-    TaggingProvider
+    TaggingProvider,
+    AiingProvider
   ]
 })
 export class AppModule {}
