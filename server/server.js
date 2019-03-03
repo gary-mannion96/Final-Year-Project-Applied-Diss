@@ -53,6 +53,22 @@ var Aiing = mongoose.model('Aiing', {
             res.json(tags); // return all tags in JSON format
         });
     });
+    
+    // Get ais
+    app.get('/api/ais', function(req, res) {
+
+        console.log("fetching ais");
+
+        // use mongoose to get all tags in the database
+        Aiing.find(function(err, ais) {
+
+            // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+            if (err)
+                res.send(err)
+
+            res.json(ais); // return all tags in JSON format
+        });
+    });
 
         // create review and send back all reviews after creation
         app.post('/api/tags', function(req, res) {
