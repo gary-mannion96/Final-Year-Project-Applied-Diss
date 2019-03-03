@@ -31,6 +31,11 @@ var Tagging = mongoose.model('Tagging', {
     description: String
 });
 
+var Aiing = mongoose.model('Aiing', {
+    aiTagNumber: String,
+    weeksGone: String,
+    inCalf: String
+});
 // Routes
 
     // Get tags
