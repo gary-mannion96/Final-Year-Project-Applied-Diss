@@ -36,11 +36,12 @@ var Aiing = mongoose.model('Aiing', {
     weeksGone: String,
     inCalf: String
 });
+
 // Routes
 
-    // Get tags
+ // Get tags
     app.get('/api/tags', function(req, res) {
-
+        
         console.log("fetching tags");
 
         // use mongoose to get all tags in the database
@@ -72,9 +73,9 @@ var Aiing = mongoose.model('Aiing', {
 
         // create review and send back all reviews after creation
         app.post('/api/tags', function(req, res) {
-
+        
             console.log("creating tag");
-    
+
             // create a tags, information comes from request from Ionic
             Tagging.create({
                 DOB : req.body.DOB,
@@ -84,7 +85,7 @@ var Aiing = mongoose.model('Aiing', {
             }, function(err, tag) {
                 if (err)
                     res.send(err);
-    
+
                 // get and return all the tags after you create another
                 Tagging.find(function(err, tags) {
                     if (err)
@@ -92,7 +93,7 @@ var Aiing = mongoose.model('Aiing', {
                     res.json(tags);
                 });
             });
-    
+
         });
 
         // create review and send back all reviews after creation
@@ -120,23 +121,24 @@ var Aiing = mongoose.model('Aiing', {
     
         });
 
-    // delete a tag
-    app.delete('/api/tags/:tag_id', function(req, res) {
-        Tagging.remove({
-            _id : req.params.tag_id
-        }, function(err, tag) {
-
+    
+        // delete a tag
+        app.delete('/api/tags/:tag_id', function(req, res) {
+            Tagging.remove({
+                _id : req.params.tag_id
+            }, function(err, tag) {
+    
+            });
         });
-    });
 
-     // delete a ai
-     app.delete('/api/ais/:ai_id', function(req, res) {
-        Aiing.remove({
-            _id : req.params.ai_id
-        }, function(err, ai) {
+         // delete a ai
+        app.delete('/api/ais/:ai_id', function(req, res) {
+            Aiing.remove({
+                _id : req.params.ai_id
+            }, function(err, ai) {
 
+            });
         });
-    });
 
 
 // listen (start app with node server.js) ======================================
