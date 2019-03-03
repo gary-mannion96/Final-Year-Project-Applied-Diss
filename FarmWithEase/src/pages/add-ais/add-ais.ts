@@ -17,7 +17,7 @@ export class AddAisPage {
 
   aiTagNumber: any;
   weeksGone: any;
-
+  inCalf: any;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
