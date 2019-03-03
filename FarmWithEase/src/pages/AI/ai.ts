@@ -13,7 +13,12 @@ export class AIPage {
   constructor(public navCtrl: NavController, public aiingService: AiingProvider, public modalCtrl: ModalController) {
 
   }
+  ionViewDidLoad(){
 
+    this.aiingService.getAis().then((data) => {
+      console.log(data);
+      this.ais = data;
+    });
 
   }
 
@@ -32,5 +37,16 @@ export class AIPage {
 
   }
 
+  deleteAi(ai){
 
+    //Remove locally
+      let index = this.ais.indexOf(ai);
+
+      if(index > -1){
+        this.ais.splice(index, 1);
+      }
+
+    //Remove from database
+    this.aiingService.deleteAis(ai._id);
+  }
 }
