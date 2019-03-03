@@ -53,7 +53,7 @@ var Aiing = mongoose.model('Aiing', {
             res.json(tags); // return all tags in JSON format
         });
     });
-    
+
     // Get ais
     app.get('/api/ais', function(req, res) {
 
@@ -90,6 +90,31 @@ var Aiing = mongoose.model('Aiing', {
                     if (err)
                         res.send(err)
                     res.json(tags);
+                });
+            });
+    
+        });
+
+        // create review and send back all reviews after creation
+        app.post('/api/ais', function(req, res) {
+
+            console.log("creating ai");
+    
+            // create a ais, information comes from request from Ionic
+            Aiing.create({
+                inCalf : req.body.inCalf,
+                weeksGone : req.body.weeksGone,
+                aiTagNumber: req.body.aiTagNumber,
+                done : false
+            }, function(err, ai) {
+                if (err)
+                    res.send(err);
+    
+                // get and return all the ais after you create another
+                Aiing.find(function(err, ais) {
+                    if (err)
+                        res.send(err)
+                    res.json(ais);
                 });
             });
     
