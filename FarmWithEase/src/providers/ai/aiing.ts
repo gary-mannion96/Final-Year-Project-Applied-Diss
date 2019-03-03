@@ -34,8 +34,24 @@ export class AiingProvider {
 
     }
 
+    createAis(ai){
 
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
 
+      this.http.post('http://localhost:8080/api/ais', JSON.stringify(ai), {headers: headers})
+        .subscribe(res => {
+          console.log(res.json());
+        });
 
+    }
+
+    deleteAis(id){
+
+      this.http.delete('http://localhost:8080/api/ais/' + id).subscribe((res) => {
+        console.log(res.json());
+      });
+
+    }
 
 }
