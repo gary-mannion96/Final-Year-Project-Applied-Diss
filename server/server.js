@@ -129,6 +129,15 @@ var Aiing = mongoose.model('Aiing', {
         });
     });
 
+     // delete a ai
+     app.delete('/api/ais/:ai_id', function(req, res) {
+        Aiing.remove({
+            _id : req.params.ai_id
+        }, function(err, ai) {
+
+        });
+    });
+
 
 // listen (start app with node server.js) ======================================
 app.listen(8080);
