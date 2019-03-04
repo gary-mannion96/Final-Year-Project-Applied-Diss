@@ -28,7 +28,8 @@ app.use(function(req, res, next) {
 var Tagging = mongoose.model('Tagging', {
     TagNumber: String,
     DOB: String,
-    description: String
+    description: String,
+    Breed: String
 });
 
 var Aiing = mongoose.model('Aiing', {
@@ -81,6 +82,7 @@ var Aiing = mongoose.model('Aiing', {
                 DOB : req.body.DOB,
                 description : req.body.description,
                 TagNumber: req.body.TagNumber,
+                Breed : req.body.Breed,
                 done : false
             }, function(err, tag) {
                 if (err)
