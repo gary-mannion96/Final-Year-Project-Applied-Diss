@@ -30,7 +30,7 @@ export class AddTagsPage {
       tagNumber: this.tagNumber,
       description: this.description,
       DOB: this.DOB,
-
+      Breed: this.Breed
     };
 
     this.viewCtrl.dismiss(review);
