@@ -16,10 +16,8 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 export class AddAisPage {
 
   aiTagNumber: any;
+  name: any;
   weeksGone: any;
-  inCalf: any;
- // name: any;
-
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
   }
@@ -28,9 +26,8 @@ export class AddAisPage {
 
     let review = {
       aiTagNumber: this.aiTagNumber,
+      name: this.name,
       weeksGone: this.weeksGone,
-      inCalf: this.inCalf
-     // name: this.name
     };
 
     this.viewCtrl.dismiss(review);

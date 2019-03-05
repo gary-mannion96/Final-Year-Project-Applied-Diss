@@ -15,7 +15,7 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 })
 export class AddTagsPage {
 
-  tagNumber: any;
+  TagNumber: any;
   DOB: any;
   Breed: any;
   Gender: any;
@@ -28,7 +28,7 @@ export class AddTagsPage {
   save(): void {
 
     let review = {
-      tagNumber: this.tagNumber,
+      TagNumber: this.TagNumber,
       DOB: this.DOB,
       Breed: this.Breed,
       Gender: this.Gender,

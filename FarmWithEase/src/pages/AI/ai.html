@@ -13,14 +13,14 @@
 <ion-content>
 
   <ion-list no-lines>
-    <!-- <ion-searchbar placeholder="Search AI" [(ngModel)]="nums"></ion-searchbar> -->
+    <ion-searchbar placeholder="Search AI" [(ngModel)]="terms"></ion-searchbar> 
 
-    <ion-item-sliding *ngFor="let ai of ais">  
+    <ion-item-sliding *ngFor="let ai of ais | search : terms">
 
       <ion-item>
 
         <p>Tag Number: {{ai.aiTagNumber}}</p>
-        <p>In calf: {{ai.inCalf}}</p>
+        <p>In calf: {{ai.name}}</p>
         <p>Weeks Gone: {{ai.weeksGone}}</p>
 
       </ion-item>

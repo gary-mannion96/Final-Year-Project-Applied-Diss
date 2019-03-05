@@ -10,7 +10,7 @@ import { AiingProvider } from '../../providers/ai/aiing';
 export class AIPage {
   ais: any [] = [];
 
-  nums: any='';
+  terms: any='';
 
   constructor(public navCtrl: NavController,public alertCtrl: AlertController,public navParams: NavParams, public aiingService: AiingProvider, public modalCtrl: ModalController) {
 

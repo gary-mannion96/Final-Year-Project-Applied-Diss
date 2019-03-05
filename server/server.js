@@ -35,8 +35,8 @@ var Tagging = mongoose.model('Tagging', {
 
 var Aiing = mongoose.model('Aiing', {
     aiTagNumber: String,
+    name: String,
     weeksGone: String,
-    inCalf: String
 });
 
 // Routes
@@ -107,7 +107,7 @@ var Aiing = mongoose.model('Aiing', {
     
             // create a ais, information comes from request from Ionic
             Aiing.create({
-                inCalf : req.body.inCalf,
+                name : req.body.name,
                 weeksGone : req.body.weeksGone,
                 aiTagNumber: req.body.aiTagNumber,
                 done : false
