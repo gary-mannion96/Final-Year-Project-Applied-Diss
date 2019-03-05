@@ -31,6 +31,7 @@ export class AddTagsPage {
       tagNumber: this.tagNumber,
       DOB: this.DOB,
       Breed: this.Breed,
+      Gender: this.Gender,
       description: this.description
     };
 
