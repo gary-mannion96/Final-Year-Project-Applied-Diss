@@ -84,6 +84,7 @@ var Aiing = mongoose.model('Aiing', {
                 description : req.body.description,
                 TagNumber: req.body.TagNumber,
                 Breed : req.body.Breed,
+                Gender : req.body.Gender,
                 done : false
             }, function(err, tag) {
                 if (err)
