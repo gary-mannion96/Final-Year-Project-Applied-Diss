@@ -29,7 +29,7 @@ var Tagging = mongoose.model('Tagging', {
     TagNumber: String,
     DOB: String,
     Breed: String,
-    Gender :req.body.Bread,
+    Gender: String,
     description: String
 });
 
