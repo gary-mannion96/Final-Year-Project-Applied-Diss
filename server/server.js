@@ -29,7 +29,8 @@ var Tagging = mongoose.model('Tagging', {
     TagNumber: String,
     DOB: String,
     description: String,
-    Breed: String
+    Breed: String,
+    Gender :req.body.Bread
 });
 
 var Aiing = mongoose.model('Aiing', {
