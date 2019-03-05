@@ -28,9 +28,9 @@ app.use(function(req, res, next) {
 var Tagging = mongoose.model('Tagging', {
     TagNumber: String,
     DOB: String,
-    description: String,
     Breed: String,
-    Gender :req.body.Bread
+    Gender :req.body.Bread,
+    description: String
 });
 
 var Aiing = mongoose.model('Aiing', {
@@ -81,10 +81,10 @@ var Aiing = mongoose.model('Aiing', {
             // create a tags, information comes from request from Ionic
             Tagging.create({
                 DOB : req.body.DOB,
-                description : req.body.description,
                 TagNumber: req.body.TagNumber,
                 Breed : req.body.Breed,
                 Gender : req.body.Gender,
+                description : req.body.description,
                 done : false
             }, function(err, tag) {
                 if (err)
