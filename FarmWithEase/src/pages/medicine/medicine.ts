@@ -12,6 +12,8 @@ export class medicinePage {
 
   column: string = 'name';
 
+  terms: any="";
+
   constructor(public medicineService: MedicineAddProvider,public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
     
   }

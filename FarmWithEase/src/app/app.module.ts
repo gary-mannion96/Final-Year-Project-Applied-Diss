@@ -20,6 +20,7 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
 
 import { SearchPipe } from '../pipes/search/search';
 
+
 import { MedicineAddProvider } from '../providers/medicine-add/medicine-add';
 //Tagging
 import { TaggingProvider } from '../providers/tagging/tagging';
@@ -27,6 +28,7 @@ import { AddTagsPage } from '../pages/add-tags/add-tags';
 //AI
 import { AiingProvider } from '../providers/ai/aiing';
 import { AddAisPage } from '../pages/add-ais/add-ais';
+
 
 @NgModule({
   declarations: [

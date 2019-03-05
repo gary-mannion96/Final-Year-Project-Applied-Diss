@@ -18,6 +18,7 @@ export class AddAisPage {
   aiTagNumber: any;
   weeksGone: any;
   inCalf: any;
+ // name: any;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
@@ -29,6 +30,7 @@ export class AddAisPage {
       aiTagNumber: this.aiTagNumber,
       weeksGone: this.weeksGone,
       inCalf: this.inCalf
+     // name: this.name
     };
 
     this.viewCtrl.dismiss(review);

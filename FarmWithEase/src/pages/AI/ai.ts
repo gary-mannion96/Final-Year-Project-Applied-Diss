@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController, ModalController, NavParams, AlertController } from 'ionic-angular';
 import { AddAisPage } from '../add-ais/add-ais';
 import { AiingProvider } from '../../providers/ai/aiing';
 
@@ -10,7 +10,9 @@ import { AiingProvider } from '../../providers/ai/aiing';
 export class AIPage {
   ais: any [] = [];
 
-  constructor(public navCtrl: NavController, public aiingService: AiingProvider, public modalCtrl: ModalController) {
+  nums: any='';
+
+  constructor(public navCtrl: NavController,public alertCtrl: AlertController,public navParams: NavParams, public aiingService: AiingProvider, public modalCtrl: ModalController) {
 
   }
   ionViewDidLoad(){

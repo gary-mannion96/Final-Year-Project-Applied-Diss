@@ -3,7 +3,7 @@
       <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
-    <ion-title>Add AI</ion-title>
+    <ion-title>AI</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="addAi()"><ion-icon name="add"></ion-icon></button>
     </ion-buttons>
@@ -13,14 +13,15 @@
 <ion-content>
 
   <ion-list no-lines>
+    <!-- <ion-searchbar placeholder="Search AI" [(ngModel)]="nums"></ion-searchbar> -->
 
-    <ion-item-sliding *ngFor="let ai of ais">
+    <ion-item-sliding *ngFor="let ai of ais">  
 
       <ion-item>
 
-        <p>{{ai.aiTagNumber}}</p>
-        <p>{{ai.inCalf}}</p>
-        <p>{{ai.weeksGone}}</p>
+        <p>Tag Number: {{ai.aiTagNumber}}</p>
+        <p>In calf: {{ai.inCalf}}</p>
+        <p>Weeks Gone: {{ai.weeksGone}}</p>
 
       </ion-item>
 
