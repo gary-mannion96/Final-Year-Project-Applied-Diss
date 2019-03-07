@@ -1,6 +1,8 @@
 {
   "name": "FarmWithEase",
-  "integrations": {},
+  "app_id": "",
   "type": "ionic-angular",
-  "app_id": "2e9a72fb"
+  "integrations": {
+    "cordova": {}
+  }
 }

@@ -10,6 +10,7 @@ import { medicinePage } from '../pages/medicine/medicine';
 import { AIPage } from '../pages/AI/ai';
 import { menuPage } from '../pages/MainMenu/menu';
 import { User } from '../Models/user';
+import { HomePage } from '../pages/home/home';
 
 @Component({
   templateUrl: 'app.html'
@@ -33,7 +34,8 @@ export class MyApp {
       { title: 'Tagging', component: taggingPage, icon:'md-pricetag' },
       { title: 'Feed', component: FeedPage, icon:'md-calculator' },
       { title: 'Medicine', component: medicinePage, icon:'md-medical'},
-      { title: 'AI', component: AIPage, icon:'md-medkit'}
+      { title: 'AI', component: AIPage, icon:'md-medkit'},
+      { title: 'Medicine Scanner', component: HomePage, icon:'md-medkit'}
     ];
 
   }

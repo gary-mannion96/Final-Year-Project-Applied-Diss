@@ -1,10 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { Toast } from '@ionic-native/toast';
 import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
+import { HomePage } from '../pages/home/home';
+import { DataServiceProvider } from '../providers/data-service/data-service';
+
+//
 import { taggingPage } from '../pages/tagging/tagging';
 import { FeedPage } from '../pages/feed/feed';
 import { medicinePage} from '../pages/medicine/medicine';
@@ -13,8 +20,6 @@ import { AIPage } from '../pages/AI/ai';
 import { AngularFireModule} from "angularfire2";
 import { AngularFireAuthModule} from "angularfire2/auth";
 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
 import { menuPage } from '../pages/MainMenu/menu';
 import { FIREBASE_CONFIG } from './app.firebase.config';
 
@@ -33,6 +38,7 @@ import { AddAisPage } from '../pages/add-ais/add-ais';
 @NgModule({
   declarations: [
     MyApp,
+    HomePage,
     taggingPage,
     FeedPage,
     medicinePage,
@@ -52,6 +58,7 @@ import { AddAisPage } from '../pages/add-ais/add-ais';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    HomePage,
     taggingPage,
     FeedPage,
     medicinePage,
@@ -64,7 +71,9 @@ import { AddAisPage } from '../pages/add-ais/add-ais';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-
+    BarcodeScanner,
+    Toast,
+    DataServiceProvider,
     MedicineAddProvider,
     TaggingProvider,
     AiingProvider
