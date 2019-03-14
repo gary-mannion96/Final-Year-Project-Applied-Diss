@@ -19,11 +19,13 @@
                 <ion-input type="password" name="password" [(ngModel)]="user.password" required></ion-input>
                 
               </ion-item>
-             
+              <ion-item>
+                <p><a (click)="resetPassword()">Forget Password?</a></p>
+              </ion-item>
               <div class="login-btns">
                 <button ion-button color="primary" color="light" style="color: rgb(0, 255, 21); border: solid 2px; width: 49.5%;" round>LOGIN</button>
                 <button ion-button color="primary" color="light" style="color: rgb(55, 0, 255); border: solid 2px; width: 49.5%;" type="button" round (click)="register()">Register</button>
-              </div>
+              </div> 
             </ion-list>
             <!-- <button ion-button color="danger" type="button" (click)="googleLogin()" ion-left round block>
               <ion-icon name="logo-googleplus" style="padding-right: 6px;"></ion-icon>

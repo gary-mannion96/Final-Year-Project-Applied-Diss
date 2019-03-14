@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { User} from "../../Models/user";
+import { ForgotPasswordPage } from "../../pages/forgot-password/forgot-password";
 
 @Component({
     selector: 'page-menu',
@@ -23,4 +24,8 @@ import { User} from "../../Models/user";
 
     // googleLogin(){
     // }
+
+    resetPassword(){
+      this.navCtrl.push(ForgotPasswordPage);
+    }
   }
