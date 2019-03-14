@@ -24,12 +24,18 @@
 
     <ion-item>
       <ion-label floating>Breed</ion-label>
-      <ion-textarea [(ngModel)]="Breed"></ion-textarea>
+      <ion-select [(ngModel)]="Breed" multiple="true" name = "Breed">
+          <ion-option>Heifer</ion-option>
+          <ion-option>Belgian Blue</ion-option>
+        </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label floating>Gender</ion-label>
-      <ion-textarea [(ngModel)]="Gender"></ion-textarea>
+      <ion-select [(ngModel)]="Gender" multiple="true" name="Gender">
+        <ion-option>Male</ion-option>
+        <ion-option>Female</ion-option>
+      </ion-select>
     </ion-item>
 
     <ion-item>
