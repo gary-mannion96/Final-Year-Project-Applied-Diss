@@ -33,6 +33,8 @@ import { AddTagsPage } from '../pages/add-tags/add-tags';
 //AI
 import { AiingProvider } from '../providers/ai/aiing';
 import { AddAisPage } from '../pages/add-ais/add-ais';
+import { ForgotPasswordPage } from "../pages/forgot-password/forgot-password";
+
 
 
 @NgModule({
@@ -46,6 +48,7 @@ import { AddAisPage } from '../pages/add-ais/add-ais';
     menuPage,
     SearchPipe,
     AddTagsPage,
+    ForgotPasswordPage,
     AddAisPage
   ],
   imports: [
@@ -65,6 +68,7 @@ import { AddAisPage } from '../pages/add-ais/add-ais';
     AIPage,
     menuPage,
     AddTagsPage,
+    ForgotPasswordPage,
     AddAisPage
   ],
   providers: [
