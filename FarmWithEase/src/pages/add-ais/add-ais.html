@@ -1,6 +1,6 @@
 <ion-header>
-  <ion-toolbar transparent>
-   <ion-title>AI</ion-title>
+  <ion-toolbar color="primary">
+   <ion-title>Add AI</ion-title>
    <ion-buttons end>
      <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
    </ion-buttons>
@@ -19,7 +19,10 @@
 
     <ion-item>
       <ion-label floating>In Calf</ion-label>
-      <ion-textarea [(ngModel)]="name"></ion-textarea>
+      <ion-select [(ngModel)]="name" multiple="true" name = "InCalf">
+          <ion-option>Yes</ion-option>
+          <ion-option>No</ion-option>
+        </ion-select>
     </ion-item>
 
     <ion-item>
