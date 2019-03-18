@@ -20,13 +20,4 @@ export class SearchPipe implements PipeTransform {
       return it.name.toLowerCase().includes(terms);
     });
   }
-
-//   transform(items: any[], terms: number): any[] {
-//     if(!items) return [];
-//     if(!terms) return items;
-// //  terms = terms.toLowerCase();
-//     return items.filter( it => {
-//     return it.Price <= terms; // only filter by term Price
-//   });
 }
-  

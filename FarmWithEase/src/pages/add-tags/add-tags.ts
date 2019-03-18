@@ -17,7 +17,7 @@ export class AddTagsPage {
 
   TagNumber: any;
   DOB: any;
-  Breed: any;
+  name: any;
   Gender: any;
   description: any;
 
@@ -30,7 +30,7 @@ export class AddTagsPage {
     let review = {
       TagNumber: this.TagNumber,
       DOB: this.DOB,
-      Breed: this.Breed,
+      name: this.name,
       Gender: this.Gender,
       description: this.description
     };

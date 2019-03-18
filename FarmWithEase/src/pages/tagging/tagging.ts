@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController, ModalController, NavParams, AlertController } from 'ionic-angular';
 import { AddTagsPage } from '../add-tags/add-tags';
 import { TaggingProvider } from '../../providers/tagging/tagging';
 
@@ -11,7 +11,9 @@ export class taggingPage {
 
   tags: any [] = [];
 
-  constructor(public navCtrl: NavController, public taggingService: TaggingProvider, public modalCtrl: ModalController) {
+  terms: any='';
+
+  constructor(public alertCtrl: AlertController,public navParams: NavParams, public navCtrl: NavController, public taggingService: TaggingProvider, public modalCtrl: ModalController) {
 
   }
   ionViewDidLoad(){

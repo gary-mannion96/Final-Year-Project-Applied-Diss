@@ -13,14 +13,16 @@
 <ion-content>
 
   <ion-list no-lines>
+    
+    <ion-searchbar placeholder="Search Tagging" [(ngModel)]="terms"></ion-searchbar> 
 
-    <ion-item-sliding *ngFor="let tag of tags">
+    <ion-item-sliding *ngFor="let tag of tags | search : terms">
 
       <ion-item>
 
         <p>Tag Number: {{tag.TagNumber}}</p>
         <p>DOB: {{tag.DOB}}</p>
-        <p>Breed: {{tag.Breed}}</p>
+        <p>Breed: {{tag.name}}</p>
         <p>Gender: {{tag.Gender}}</p>
         <p>Description: {{tag.description}}</p>
 

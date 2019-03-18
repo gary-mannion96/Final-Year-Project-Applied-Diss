@@ -28,7 +28,7 @@ app.use(function(req, res, next) {
 var Tagging = mongoose.model('Tagging', {
     TagNumber: String,
     DOB: String,
-    Breed: String,
+    name: String,
     Gender: String,
     description: String
 });
@@ -82,7 +82,7 @@ var Aiing = mongoose.model('Aiing', {
             Tagging.create({
                 DOB : req.body.DOB,
                 TagNumber: req.body.TagNumber,
-                Breed : req.body.Breed,
+                name : req.body.name,
                 Gender : req.body.Gender,
                 description : req.body.description,
                 done : false
@@ -143,8 +143,6 @@ var Aiing = mongoose.model('Aiing', {
 
             });
         });
-
-
-// listen (start app with node server.js) ======================================
+// listen (start app with node server.js) 
 app.listen(8080);
 console.log("App listening on port 8080");
