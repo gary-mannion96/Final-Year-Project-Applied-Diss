@@ -102,13 +102,13 @@ Having a fodder app as our starting point we started to research other apps and 
 
 We wanted a app that had essentially the same functionality as Heard Watch but which was geared more towards the stress points of farming We did this by focusing on what stresses farmers the most, We also created a forum for farmers to get in touch with one another, to either get information from one another or to give information, These would compliment the normal functionality of a accommodation app such as, publish ads (either fodder or rent land), search lists, view ads or messages and land for rent and edit and delete your personal ads. This would also require log in and registration functionality.  
 
-After deliberating over the objective of our application, we then turned to what technology we would use. We wanted to use a array of technologies to show our capabilities but also gain more knowledge and become better programmers over all. We settled on a 3 tier structure containing a Ionic 3 presentation tier (front end), NodeJS logic tier (middle-ware)  and Mongo/fire-base database data tier (back end).
+After deliberating over the objective of our application, we then turned to what technology we would use. We wanted to use a array of technologies to show our capabilities but also gain more knowledge and become better programmers over all. We settled on a 3 tier structure containing a Ionic 3 presentation tier (front end), NodeJS logic tier (middle-ware)  and MongoDB/CouchDB/fire-base Authentication data tier (back end).
 
 From what we hoped to achieve from creating this app was the knowledge of new technology, personal growth through team building and of course to produce something of substance and something we could be proud of.
 
 \chapter{Context}
 
-The general context of our application revolves around farmers having a platform which is geared towards tracking fodder, and there heard. farmers will be able to calculate amounts of fodder for the winter months and use the app to keep track of the tagging of new born animals, track medicines for animals throughout the year. And store AI information to which heard animal are in calf and how far alone they are gone and when they are due.
+The general context of our application revolves around farmers having a platform which is geared towards tracking fodder, and there heard. farmers will be able to calculate amounts of fodder for the winter months and use the app to keep track of the tagging of new born animals, track medicines for animals throughout the year, and store AI information to which heard animal are in calf and how far alone they are gone and when they are due.
 
 
 \begin{itemize}
@@ -143,9 +143,11 @@ The main objective of our application is to help farmers who may be struggling w
      \item \textbf{Medicine}
      The objective of this medicine page is to keep track of all the animals medicine that have been taken, show when it was taken, how much was taken. This will allow the user to keep track of heard medicine buy filling in form details.
      
+     \item \textbf{Scanner}
+     The scanner would be used for a user to scan a medicine bottle and specific information would be returned about that specific bottle.
+     
     \item \textbf{Message Board} 
     The objective of the message board is to have a place where farmers can communicate with each other, helping themselves and other farmers with problems and place ads for stock.
-    
     
     \item \textbf{My Ads Page}
     The objective of the Ad’s page is to allow a user to view a list of their published ads. In here they can delete these ads or they have the option to edit their published ads.
@@ -173,7 +175,7 @@ architecture and design of farmers app. We explain why we chose these specific t
 
 
 \subsection{System Evaluation}
-In this chapter we evaluate our system in the areas of Robustness, Testing, Scalability, Results against Objectives and Limitations.
+In this chapter we evaluate our system in the areas of Robustness, Testing, Results Versus Objectives and Limitations.
 
 
 \subsection{Conclusion}
@@ -181,7 +183,6 @@ In the conclusion we summaries our project against our goals and objectives. We 
 
 \chapter{Methodology}
 
-%\section{Methodology}
 In this chapter we discuss the methodologies used in our project. A methodology is just a way to plan and control the development process of a piece of software. There are various methodologies to choose from including Extreme Programming, Rapid Application Development or Waterfall but for this project we use Agile as our main methodology.
 
 
@@ -230,25 +231,16 @@ Black box testing is a way of testing a piece of software without knowing the in
 
 
 \section{Sprints} \label{reseacrh_sprints}
-In this section we shale be discussing the sprites, Each of the sprints we completed during the research of our project gave us the opportunity to learn as a team and adapt to the various needs of the project. Each sprint represents a vital aspect of the application, i.e., creating three tier architecture, accessing native phone capabilities through Cordova and learning how to integrate all these features together. We prioritized the research sprints in the order as follows.
+In this section we shall be discussing the sprites, Each of the sprints we completed during the research of our project gave us the opportunity to learn as a team and adapt to the various needs of the project. Each sprint represents a vital aspect of the application, i.e., creating three tier architecture, accessing native phone capabilities through Cordova and learning how to integrate all these features together. We prioritized the research sprints in the order as follows.
 
-\subsection{Sprint 1 Review Project}
-This was our first sprint and it was worked on by all members in our team. we researched simple app in which he explains the process of building a simple review app using three tier technology. On the front end a user can write a small review and then add a score. That information is then sent to a node server which stores the information in a MongoDB database. We felt it was very important that all members understood the process involved in connecting these three layers together so we all worked on this sprint together.   
+\subsection{Sprint 1 Review King}
+This was our first sprint and it was worked on by all members in our team. we researched a simple app in which it explains the process of building a simple review app using three tier technology. On the front end a user can write a small review and then add a score. That information is then sent to a node server which stores the information in a MongoDB database. We felt it was very important that all members understood the process involved in connecting these three layers together so we all worked on this sprint together.   
 
 \subsection{Sprint 2 "cloudo"}
 For our research in this sprint we look at using pouch DB and couch DB in our app in one of our pages just to offer us another Database choice if we encountered any problems down the line. We researched a simple app called "cloudo" which we both worked on and built step-by-step in order to understand how these Databases would work in our ionic project. We simply would just import Pouch DB into our project, get Pouch DB to call our Couch DB database using a remote link on our local-host, create a database giving it a name 'cloudo'. once this is done we would be able to write to our Database from a page and update/delete if need be.
 
-\subsection{Sprint 3 Image}
-%This was a relatively small sprint and was completed by us. The plan for this sprint was to create a small app which displayed images in a gallery style format. Using a plugin for ionic called ionic-img-viewer \cite{ImgViwer}, an image is made larger when it is clicked. Images can also be moved left and right in a gallery style look while incorporating zoom functionality. 
-
-%\subsection{Sprint 3 Image Back-end}
-%The next phase of the project was figuring out a way of using a mobile devices camera to take a picture, upload that picture to a node server and then save a reference to that image in a MongoDB database. To do this we split this process up into two sprints. Both Sprint 3 and 4 were worked on by all three members in our team as it was important for all members to understand the process involved in implementing these features. The first sprint involved setting up the back end. We achieved this functionality by following a blog by Devdactic \cite{ImageBackEnd} where we set up our NodeJS back-end. Once completed, our backend had the capability to upload and store images. This functionality was tested using software called Postman \cite{Postman}. Postman is a HTTP client service which helps developers test their API with various HTTP requests.
-
-%\subsection{Sprint 4 Image Front-End}
-%This was the second of a two-part sprint in which we developed the front end of a mobile app using the Ionic framework. This front end would then be able to upload and save a photo to a NodeJS server running locally on our machines. We achieved this functionality by following part 2 of a blog by Devdactic  \cite{ImageFrontEnd}. 
-
-\subsection{Sprint 4 Login/Register}
-In this sprint, implemented by Patrick, a small mobile application was developed where login and registration with Fire-base was implemented. We are using Fire-base in our farming application to securely authenticate our users with email and password registration and login. The user also has the option of logging into our app via Facebook.
+\subsection{Sprint 3 Login/Register}
+In this sprint, implemented by Patrick, a small mobile application was developed where login and registration with Fire-base was implemented. We are using Fire-base in our farming application to securely authenticate our users with email and password registration and login. 
 
 \section{Development Sprints}\label{development_sprints}
 
@@ -277,14 +269,6 @@ In this sprite we worked on the how we would use the medicine page, we decided t
 In this sprite we worked on the how we would use the AI page, we decided to use it as a way of keeping track of the heard animals that are in calf, We first implemented the functionality on the front end allowing the user to input data of the animal and storing it, the information would be how far alone they war, and track with one are not in calf as of yet. so the farmer can track how many to expect for the winter and spring months.
 
 
-%\subsection{Sprint 5 Camera Functionality}
-%This sprint was worked on by all three members of our team because taking and storing images is one of the prominent features of Digs. We first implemented the functionality on the front end. This allows a user to take a photo using the camera on their device or by selecting a photo from their devices internal storage. We then implemented our backend API to store those images mapping each image/s with its unique ad id. We then set up the functionality to send the full listing including images to our back-end which we set up in sprint 4.
-
-%\subsection{Sprint 6 Displaying Listings}
-%Once a listing was stored in our database, it was now time to display all the stored listings in our app. Gerard completed this sprint by successfully displaying a full list of properties and rooms including their images.
-
-%\subsection{Sprint 7 Accessing Google Maps}
-%To make it easier for the user to find the location of a listed property, we display to the user that properties location on the maps application installed on their device. This sprint, implemented by Patrick, uses a plugin from Cordova called launch navigator \cite{LaunchNav}. This plugin is used to navigate to a destination, in our case using an Eircode, by launching the native application apps on android, iOS and windows devices.
 
 \subsection{Sprint 9 Message Board }
 The next task, implemented by the team, was the Message board. The result of this sprint was the creation of a forum in which users can communicate with each other by creating and posting messages. we first set up the back-end to store these messages in MongoDB database and then displays the stored messages to the user. Message output includes the users name, message and date created.
@@ -299,7 +283,7 @@ This sprint was worked on by all members of our team as we had no experience in 
 One of the last features of our application is the search functionality. Implemented by team members, user can narrow down the tag number information in the tagging page, medicine page and AI page. We first implemented the functionality on the front end allowing the user to input data of the animal and searching it.
 
 
-%\subsection{Sprint 10 Validation}
+%\subsection{Sprint 13 Validation}
 %In this sprint Patrick and Gerard implemented form validation on the register, login, message board and create ad pages. For the matching passwords validation, we created a custom function which checks that the passwords are the same. For all other form validation, we use Angular directives to check that correct input is entered and that all fields are complete before the from can be processed. 
 
 \chapter{Technology Review}
@@ -722,13 +706,6 @@ In the Presentation Tier section will be looking at five areas. We will look at 
 \subsection{Ionic 3 App Structure}
 First of all we have our Ionic 3 App structure which can be seen the below figure.
 
-\begin{figure}[ht]
-\renewcommand\thefigure{5.6}
-\centering
-\includegraphics[width=8cm,height=5cm]{Images/app.png},
-\caption{App Structure}
-\label{app}
-\end{figure}
 
 We will give a brief explanation to each folder that can be seen in figure 5.6:
 
@@ -737,17 +714,200 @@ We will give a brief explanation to each folder that can be seen in figure 5.6:
     \item src - is the folder where we will do most of our coding for our Ionic 3 app. In here we will be using SCSS, typescript, angularjs and javascript.
     \item WWW - is where our index.html lies and is the root component where the app will load
 \end{itemize}
+%% make edits here once app is finished
+\begin{figure}[ht]
+\renewcommand\thefigure{5.6}
+\centering
+\includegraphics[width=8cm,height=5cm]{Images/app.png},
+\caption{App Structure}
+\label{app}
+\end{figure}
 
+In the src folder Ionic 3 have structured our components into well thought out Folders as seen in ﬁgure 5.7 below.
 
-%\subsection{Providers}
+\begin{itemize}
+    \item App – This is where we set up the base of our app. In here we provide access to components (such as other pages, providers etc) for various pages in our App as well as creating the App shell. For example whether our App will be a side Menu or tab style Application structure.
+    \item Assets – Folder containing any images/icons.
+    \item Models - In here we create our object models. For example we have our User Model here which is made up of a String Email and a String Password.
+    \item Pages – This is where the majority of our presentation tier code goes. Here is where we go through our pages design and how they will function for us. We will be going into each page in more detail below.
+    \item Pipes – In our pipes folder we link up with our list arrays to perform a search in our medicine and AI section where we can search for a specific name of a medicine or whether or not a cow is 'In Calf' or not.
+    \item Providers – This is where we link our Application to our Logic Tier Servers. We have three providers that is looking after our tagging, AI and medicine sections. In the next section we will show you how we accomplish this.
+    \item Theme– This allows us to set the overall design and look of our app through global SCSS.
+    %\item Validators – In here we provide functions to validate whether users input was correct. I.e valid email address.
+\end{itemize}
 
-%\subsection{Pipes}
+\subsection{Providers}
+The providers give our application to our data tier through our servers. It is here where we apply the logic and perform HTTP requests to our Node servers to either return, create or delete data from a server. It is in this folder where we make the connection from our Ionic Application to our specific data base on the server.
 
-%\subsection{Pages}
+\subsection{Pages}
+Ionic 3 pages are broken up into four parts:
+
+\begin{figure}[ht]
+\renewcommand\thefigure{5.8}
+\centering
+\includegraphics[width=6cm,height=4.5cm]{Images/pages.png},
+\caption{Pages layout}
+\label{pages}
+\end{figure}
+
+In fig 5.8 we can see how our register page is laid out with 4 different parts.
+
+\begin{itemize}
+    \item \textbf{register.html:} HTML file which creates the overall layout of the page. Adding forms, lists, buttons and images where needed. With the Ionic framework we can use angular directives on html elements such as buttons which oﬀers us greater functionality and design. For Example:
+    \begin{minted}{html}
+        <button>Hello World</button>
+    \end{minted}
+    \item \textbf{register.module.ts:} This page is auto generated when generating the page. It is seen as the deep thinking part of our page. We do no actual code changes here to design our page.
+    \item \textbf{register.scss:} The SCSS design of the page.
+    \item \textbf{register.ts:} TypeScript ﬁle which handles the logical function of the page. Here we code our individual functions and bring in our imports needed for functionality.
+\end{itemize}
+
+We will now go through our Applications pages below.
+
+\subsubsection{Login Page}
+% edit here if google login added
+
+This page will be the first page greeted by the user when opening the app. It is here where they can login to their account(if one exists) with an email address and password. When entering the email and password, validation is performed to ensure that the email is the right format, the password contains the right characters and length and all ﬁeld are ﬁlled. Firebase Authentication is used here which it will query our Firebase API to check if they user exists in our Firebase Database.
+
+If the user is logged-in successfully, the API will return the users details to the screen, a session key to grant access to the apps features and will allow our user to be navigated to the Home Page of our App. If the user is new to our they can click on our Register button which navigate them to our register page where they can enter their details to be given an account.
+
+If the user forgets their password, a 'forgot password' button is available on this page also which when clicked on by the user will bring them to a forgot password page. 
+
+\begin{figure}[ht]
+\renewcommand\thefigure{5.9}
+\centering
+\includegraphics[width=4.5cm,height=7cm]{Images/loginPage.jpg},
+\caption{Login Page}
+\label{login}
+\end{figure}
+
+\subsubsection{Register Page}
+When the user enters the register page they will be prompted to enter an email address and password in order to register their account. The same validation progress is performed here as with the login page as the email and password fields. When the user clicks 'Register', our Firebase API will store the user details, will return a session key in order to grant the user access to our App. Upon completion of registration the user will be navigated to the home page.
+
+\begin{figure}[ht]
+\renewcommand\thefigure{5.10}
+\centering
+\includegraphics[width=4.5cm,height=7cm]{Images/registerpage.jpg},
+\caption{Register Page}
+\label{register}
+\end{figure}
+
+\subsubsection{Forgot Password Page}
+Here the user will be asked to enter their email address and to tap the reset button. If the email is a registered email address the user will be asked to check their email account and follow the instruction to reset their password upon receiving an email from FarWithEase.
+
+\subsubsection{Side Menu}
+Our side menu will give the user the navigation options throughout the App. The menu is available once a user is logged in. Once logged in users can navigate freely throughout the App by using all the options available in the side menu.
+
+If a user decides they are finished using the App and wish to logout, we have a logout button which will logout the user and return them to the login page.
+
+\begin{figure}[ht]
+\renewcommand\thefigure{5.11}
+\centering
+\includegraphics[width=4.5cm,height=7cm]{Images/sideMenu.jpg},
+\caption{Side Menu}
+\label{menu}
+\end{figure}
+
+%\subsubsection{Home Page}
+
+\newpage
+\subsubsection{Tagging Page}
+Our tagging page is where our user can add all their livestock that are tagged to keep them in their records. The user can tap on the add icon on the top left on the page which will pop up a modal where the user can input their data(we will discuss the modals later). Once the data is entered and saved it will be displayed as a list in the tagging page. If the user wishes to the delete the data they can swipe left to view a trash can which will delete the data from the list and also from the database where it is saved.
+
+At the top of this page we have also added a search bar for our users to search their information by Breed.
+
+\subsubsection{Feed Page}
+Our feed page is very different to our other pages where it is here where specific calculations can be carried out by a user in regards to silage quantity, pit sizes and how much bales of silage they need, have or will be left with in their own specific scenario. 
+
+\subsubsection{Medicine Page}
+For our medicine page we have designed it so that the user can easily input data for what medicines they have used on a certain animal. The add icon will be displayed in the top right corner and will pop up a small input box with different information that a user can add to the list and database. The user will also have the option to delete this information later on if they wish so. We decided that the update function should not be used here as it is not the right thing for a farmer to be editing what medicines they are using on the farm.
+
+As like in our Tagging page we have a search bar here also so we can search for our medicine names.
+
+\subsubsection{AI Page}
+On the AI page we decided to make we are giving the users the feature to keep record of all the calving and births that is happening on their farm. The farmer can enter the cows tag number, how many weeks she has been in calf, and also whether she is in calf or not. This section can be used as a way for a farmer to keep a total record of their cattle and then to also track any pregnancies along the way.
+
+As above our search bar is also in this page where a user can filter their information by whether a cow is in calf or not.
+
+\subsubsection{Add Pages for Tagging and AI}
+You can see the layout for our search pages from figure 5.12  below. These pages are presented to the user when the click on the add icon on the relative pages for tagging and AI. The user can fill out the form on these pages as appropriate to their needs. Once all areas are filled out the user can click the save button which will return them to the previous screen but this time their entered information will be displayed on the list will all relative fields entered displaying. 
+
+\subsubsection{Add to Medicine}
+This add section is different to above as it is not an actual separate page. For this section we opted to use a prompt function just to simply demonstrate the different ways how adding items to a page could be done. It works in the exact same way as the pages for tagging and AI where we have a form that needs to be filled out, at the bottom we have a cancel and save button. Cancel will just exit the procedure and return to the page, clicking save will save the data entered and return it to the medicine page where it will be visible to our users.
+
+\subsubsection{Medicine Scanner}
+This page is where a user will locate a a bar cod scanner which they can use if they wish to scan a medicine bottle they are using on an animal and it will return data back to them giving information about that certain medicine being used.
+
+%\subsubsection{Search Page}
+
+%\subsection{Styling}
+
+\subsection{Deployment/Hosting}
+For now we have decided to host our project locally on our own machines for testing purposes.
+
+We first must run our MongoDB which is done by opening a CMD prompt and then cd to the location of our bin folder.
+\begin{minted}[tabsize=2,breaklines]{bash}
+C:\Program Files\MongoDB\Server\4.0\bin>mongod
+\end{minted}
+
+Once this is running we then must go on to run our server.js file in our folder. We do this again by opening the node CMD prompt and cd to our server file location.
+\begin{minted}[tabsize=2,breaklines]{bash}
+C:\Users\Gary Mannion\Desktop\Final-Year-Project-Applied-Diss\server>node server.js
+\end{minted}
+
+Once all these steps are done we can then cd to our Ionic app location and start it.
+\begin{minted}[tabsize=2,breaklines]{bash}
+C:\Users\Gary Mannion\Desktop\Final-Year-Project-Applied-Diss\FarmWithEase>ionic serve
+\end{minted}
+
+Once all the above has been completed the app should be running as intended to.
 
 \chapter{System Evaluation}
+In this chapter we aim to evaluate our system in the following areas:
+\begin{itemize}
+    \item Robustness
+    \item Testing
+    \item Limitations
+    \item Results V Objectives
+\end{itemize}
+
+\section{Robustness}
+
+\section{Testing}
+Through continuous white box testing and regular black box testing we believe our App has reached the expectations we set out at the start of our project. In order to achieve these expectation we carried out testing using our white box testing in the following ways:
+\begin{enumerate}
+    \item Ionic Serve
+    \item Device Testing
+\end{enumerate}
+
+\subsection{Ionic Serve}
+We used this method of testing in our browser as it could be used alongside the development of the App while were carrying work. We simply just cd to the root of the Ionic App folder and run the following:
+\begin{minted}{bash}
+ionic serve
+\end{minted}
+
+This testing method was very helpful in the development of the app as it provides a live-reload server. This meaning whenever we made a change in any part of our code(HTML, TypeScript or SCSS) the changes would automatically reload in the browser.
+\\
+There is also the option of running the command:
+\begin{minted}{bash}
+ionic serve --lab
+\end{minted}
+
+This would show us a preview of how each change would appear in Android, IOS and Windows platforms.
+
+\subsection{Device Testing}
+We opted to use the Ionic DevApp Application from the iOS store for testing on iOS devices. This was helpful for getting an idea of the app was functioning on the iOS devices but it needed to be connected to the same network as the laptop it was connected with so was not the best option.\\
+
+\noindent
+Instead we decided to build an Adnroid APK file which we could then install on an Android device and do some better testing from there.
+
+\section{Limitations}
+
+\section{Results V Objectives}
 
 \chapter{Conclusion}
+
+\section{Future Development}
 
 \chapter{Appendix}
 

@@ -29,8 +29,9 @@
         "@types/pouchdb": "6.3.3",
         "angularfire2": "^5.1.1",
         "cordova-android": "^6.2.3",
+        "cordova-ios": "4.5.5",
         "cordova-plugin-compat": "^1.1.0",
-        "cordova-plugin-console": "^1.0.5",
+        "cordova-plugin-console": "^1.1.0",
         "cordova-plugin-device": "^1.1.4",
         "cordova-plugin-splashscreen": "^4.0.3",
         "cordova-plugin-statusbar": "^2.2.2",
@@ -63,7 +64,8 @@
             "cordova-plugin-x-toast": {}
         },
         "platforms": [
-            "android"
+            "android",
+            "ios"
         ]
     }
 }
