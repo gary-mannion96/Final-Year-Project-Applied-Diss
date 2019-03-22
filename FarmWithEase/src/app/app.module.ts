@@ -38,7 +38,7 @@ import { ForgotPasswordPage } from "../pages/forgot-password/forgot-password";
 //Report
 import { ReportPage } from '../pages/Report/report';
 import { AddReportsPage } from '../pages/add-reports/add-reports';
-
+import { ReportingProvider } from '../providers/report/reporting';
 
 
 @NgModule({
@@ -74,9 +74,9 @@ import { AddReportsPage } from '../pages/add-reports/add-reports';
     AIPage,
     menuPage,
     AddTagsPage,
+    ReportPage,
     ForgotPasswordPage,
     AddAisPage,
-    ReportPage,
     AddReportsPage
   ],
   providers: [
@@ -88,7 +88,8 @@ import { AddReportsPage } from '../pages/add-reports/add-reports';
     DataServiceProvider,
     MedicineAddProvider,
     TaggingProvider,
-    AiingProvider
+    AiingProvider,
+    ReportingProvider
   ]
 })
 export class AppModule {}
