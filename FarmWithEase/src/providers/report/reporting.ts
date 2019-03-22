@@ -34,5 +34,16 @@ export class ReportingProvider {
 
     }
 
+    createReports(report){
+
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+
+      this.http.post('http://localhost:8080/api/reports', JSON.stringify(report), {headers: headers})
+        .subscribe(res => {
+          console.log(res.json());
+        });
+
+    }
 
 }
