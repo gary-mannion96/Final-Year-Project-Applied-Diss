@@ -21,6 +21,16 @@ export class AddReportsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
   }
 
+  save(): void {
+
+    let review = {
+      reportInfo: this.reportInfo,
+    };
+
+    this.viewCtrl.dismiss(review);
+
+  }
+
   close(): void {
     this.viewCtrl.dismiss();
   }
