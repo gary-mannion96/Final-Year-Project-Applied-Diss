@@ -39,6 +39,10 @@ var Aiing = mongoose.model('Aiing', {
     weeksGone: String,
 });
 
+var Reporting = mongoose.model('Reporting', {
+    reportInfo: String,
+});
+
 // Routes
 
  // Get tags
