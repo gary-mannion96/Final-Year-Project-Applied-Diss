@@ -37,6 +37,8 @@ import { ForgotPasswordPage } from "../pages/forgot-password/forgot-password";
 
 //Report
 import { ReportPage } from '../pages/Report/report';
+import { AddReportsPage } from '../pages/add-reports/add-reports';
+
 
 
 @NgModule({
@@ -52,7 +54,8 @@ import { ReportPage } from '../pages/Report/report';
     AddTagsPage,
     ForgotPasswordPage,
     AddAisPage,
-    ReportPage
+    ReportPage,
+    AddReportsPage
   ],
   imports: [
     BrowserModule,
@@ -73,7 +76,8 @@ import { ReportPage } from '../pages/Report/report';
     AddTagsPage,
     ForgotPasswordPage,
     AddAisPage,
-    ReportPage
+    ReportPage,
+    AddReportsPage
   ],
   providers: [
     StatusBar,
