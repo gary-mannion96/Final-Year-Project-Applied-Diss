@@ -35,6 +35,8 @@ import { AiingProvider } from '../providers/ai/aiing';
 import { AddAisPage } from '../pages/add-ais/add-ais';
 import { ForgotPasswordPage } from "../pages/forgot-password/forgot-password";
 
+//Report
+import { ReportPage } from '../pages/Report/report';
 
 
 @NgModule({
@@ -49,7 +51,8 @@ import { ForgotPasswordPage } from "../pages/forgot-password/forgot-password";
     SearchPipe,
     AddTagsPage,
     ForgotPasswordPage,
-    AddAisPage
+    AddAisPage,
+    ReportPage
   ],
   imports: [
     BrowserModule,
@@ -69,7 +72,8 @@ import { ForgotPasswordPage } from "../pages/forgot-password/forgot-password";
     menuPage,
     AddTagsPage,
     ForgotPasswordPage,
-    AddAisPage
+    AddAisPage,
+    ReportPage
   ],
   providers: [
     StatusBar,
