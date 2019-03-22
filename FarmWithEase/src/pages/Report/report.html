@@ -9,3 +9,21 @@
     </ion-buttons>
   </ion-navbar>
 </ion-header>
+
+<ion-content>
+
+  <ion-list no-lines>
+    <ion-searchbar placeholder="Search Report" [(ngModel)]="terms"></ion-searchbar>
+
+    <ion-item-sliding *ngFor="let report of reports | search : terms">
+
+      <ion-item>
+
+        <p>Report: {{report.reportInfo}}</p>
+
+      </ion-item>
+
+
+  </ion-list>
+
+</ion-content>
