@@ -9,3 +9,29 @@
 
 
 </ion-content>
+<ion-header>
+  <ion-toolbar color="primary">
+   <ion-title>Add Report</ion-title>
+   <ion-buttons end>
+     <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+   </ion-buttons>
+  </ion-toolbar>
+ </ion-header>
+
+
+ <ion-content>
+
+  <ion-list no-lines>
+
+    <ion-item>
+      <ion-label floating>Report</ion-label>
+      <ion-input [(ngModel)]="reportInfo" type="text"></ion-input>
+    </ion-item>
+
+
+
+  </ion-list>
+
+  <button ion-button full color="secondary" (click)="save()">Save</button>
+
+</ion-content>
