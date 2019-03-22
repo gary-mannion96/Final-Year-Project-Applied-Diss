@@ -77,7 +77,6 @@ var Reporting = mongoose.model('Reporting', {
         });
     });
 
-    // get report
     app.get('/api/reports', function(req, res) {
 
         console.log("fetching reports");
@@ -145,6 +144,28 @@ var Reporting = mongoose.model('Reporting', {
     
         });
 
+        app.post('/api/reports', function(req, res) {
+
+            console.log("creating report");
+    
+            // create a ais, information comes from request from Ionic
+            Reporting.create({
+                reportInfo: req.body.reportInfo,
+                done : false
+            }, function(err, report) {
+                if (err)
+                    res.send(err);
+    
+                // get and return all the ais after you create another
+                Reporting.find(function(err, reports) {
+                    if (err)
+                        res.send(err)
+                    res.json(reports);
+                });
+            });
+    
+        });
+
     
         // delete a tag
         app.delete('/api/tags/:tag_id', function(req, res) {
@@ -160,6 +181,14 @@ var Reporting = mongoose.model('Reporting', {
             Aiing.remove({
                 _id : req.params.ai_id
             }, function(err, ai) {
+
+            });
+        });
+
+        app.delete('/api/reoprts/:report_id', function(req, res) {
+            Reporting.remove({
+                _id : req.params.report_id
+            }, function(err, report) {
 
             });
         });
