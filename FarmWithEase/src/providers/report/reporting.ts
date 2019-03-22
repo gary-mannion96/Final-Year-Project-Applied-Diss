@@ -46,4 +46,12 @@ export class ReportingProvider {
 
     }
 
+    deleteAis(id){
+
+      this.http.delete('http://localhost:8080/api/reports/' + id).subscribe((res) => {
+        console.log(res.json());
+      });
+
+    }
+
 }
