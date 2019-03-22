@@ -77,6 +77,22 @@ var Reporting = mongoose.model('Reporting', {
         });
     });
 
+    // get report
+    app.get('/api/reports', function(req, res) {
+
+        console.log("fetching reports");
+
+        // use mongoose to get all tags in the database
+        Reporting.find(function(err, reports) {
+
+            // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+            if (err)
+                res.send(err)
+
+            res.json(reports); // return all tags in JSON format
+        });
+    });
+
         // create review and send back all reviews after creation
         app.post('/api/tags', function(req, res) {
         
