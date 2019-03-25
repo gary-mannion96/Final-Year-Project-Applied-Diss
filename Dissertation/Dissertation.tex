@@ -773,6 +773,7 @@ If the user is logged-in successfully, the API will return the users details to 
 
 If the user forgets their password, a 'forgot password' button is available on this page also which when clicked on by the user will bring them to a forgot password page. 
 
+%change login image
 \begin{figure}[ht]
 \renewcommand\thefigure{5.9}
 \centering
@@ -784,6 +785,7 @@ If the user forgets their password, a 'forgot password' button is available on t
 \subsubsection{Register Page}
 When the user enters the register page they will be prompted to enter an email address and password in order to register their account. The same validation progress is performed here as with the login page as the email and password fields. When the user clicks 'Register', our Firebase API will store the user details, will return a session key in order to grant the user access to our App. Upon completion of registration the user will be navigated to the home page.
 
+%change register image
 \begin{figure}[ht]
 \renewcommand\thefigure{5.10}
 \centering
@@ -792,8 +794,18 @@ When the user enters the register page they will be prompted to enter an email a
 \label{register}
 \end{figure}
 
+\newpage
+
 \subsubsection{Forgot Password Page}
-Here the user will be asked to enter their email address and to tap the reset button. If the email is a registered email address the user will be asked to check their email account and follow the instruction to reset their password upon receiving an email from FarWithEase.
+Here the user will be asked to enter their email address and to tap the reset button. If the email is a registered email address the user will be asked to check their email account and follow the instruction to reset their password upon receiving an email from FarmWithEase.
+
+\begin{figure}[ht]
+\renewcommand\thefigure{5.11}
+\centering
+\includegraphics[width=4cm,height=7cm]{Images/password.png},
+\caption{Forgot password Page}
+\label{password}
+\end{figure}
 
 \subsubsection{Side Menu}
 Our side menu will give the user the navigation options throughout the App. The menu is available once a user is logged in. Once logged in users can navigate freely throughout the App by using all the options available in the side menu.
@@ -801,9 +813,9 @@ Our side menu will give the user the navigation options throughout the App. The 
 If a user decides they are finished using the App and wish to logout, we have a logout button which will logout the user and return them to the login page.
 
 \begin{figure}[ht]
-\renewcommand\thefigure{5.11}
+\renewcommand\thefigure{5.12}
 \centering
-\includegraphics[width=4.5cm,height=7cm]{Images/sideMenu.jpg},
+\includegraphics[width=4cm,height=6cm]{Images/sideMenu.png},
 \caption{Side Menu}
 \label{menu}
 \end{figure}
@@ -816,29 +828,91 @@ Our tagging page is where our user can add all their livestock that are tagged t
 
 At the top of this page we have also added a search bar for our users to search their information by Breed.
 
+\begin{figure}[ht]
+\renewcommand\thefigure{5.13}
+\centering
+\includegraphics[width=4cm,height=6cm]{Images/tagging.png},
+\caption{Tagging Page}
+\label{tagging}
+\end{figure}
+
 \subsubsection{Feed Page}
 Our feed page is very different to our other pages where it is here where specific calculations can be carried out by a user in regards to silage quantity, pit sizes and how much bales of silage they need, have or will be left with in their own specific scenario. 
+
+\begin{figure}[ht]
+\renewcommand\thefigure{5.13}
+\centering
+\includegraphics[width=4.5cm,height=7cm]{Images/feed1.png},
+\includegraphics[width=4.5cm,height=7cm]{Images/feed2.png},
+\caption{Feed page}
+\label{feed}
+\end{figure}
 
 \subsubsection{Medicine Page}
 For our medicine page we have designed it so that the user can easily input data for what medicines they have used on a certain animal. The add icon will be displayed in the top right corner and will pop up a small input box with different information that a user can add to the list and database. The user will also have the option to delete this information later on if they wish so. We decided that the update function should not be used here as it is not the right thing for a farmer to be editing what medicines they are using on the farm.
 
 As like in our Tagging page we have a search bar here also so we can search for our medicine names.
 
+\begin{figure}[ht]
+\renewcommand\thefigure{5.14}
+\centering
+\includegraphics[width=4cm,height=6.25cm]{Images/medicine.png},
+\caption{Medicine Page}
+\label{medicine}
+\end{figure}
+
+\newpage
+
 \subsubsection{AI Page}
 On the AI page we decided to make we are giving the users the feature to keep record of all the calving and births that is happening on their farm. The farmer can enter the cows tag number, how many weeks she has been in calf, and also whether she is in calf or not. This section can be used as a way for a farmer to keep a total record of their cattle and then to also track any pregnancies along the way.
 
 As above our search bar is also in this page where a user can filter their information by whether a cow is in calf or not.
 
+\begin{figure}[ht]
+\renewcommand\thefigure{5.15}
+\centering
+\includegraphics[width=4cm,height=6.5cm]{Images/AI.png},
+\caption{AI Page}
+\label{AI}
+\end{figure}
+
 \subsubsection{Add Pages for Tagging and AI}
 You can see the layout for our search pages from figure 5.12  below. These pages are presented to the user when the click on the add icon on the relative pages for tagging and AI. The user can fill out the form on these pages as appropriate to their needs. Once all areas are filled out the user can click the save button which will return them to the previous screen but this time their entered information will be displayed on the list will all relative fields entered displaying. 
+
+\begin{figure}[ht]
+\renewcommand\thefigure{5.16}
+\centering
+\includegraphics[width=4.5cm,height=7cm]{Images/addAI.png},
+\includegraphics[width=4.5cm,height=7cm]{Images/addTags.png},
+\caption{Add pages}
+\label{add}
+\end{figure}
 
 \subsubsection{Add to Medicine}
 This add section is different to above as it is not an actual separate page. For this section we opted to use a prompt function just to simply demonstrate the different ways how adding items to a page could be done. It works in the exact same way as the pages for tagging and AI where we have a form that needs to be filled out, at the bottom we have a cancel and save button. Cancel will just exit the procedure and return to the page, clicking save will save the data entered and return it to the medicine page where it will be visible to our users.
 
+\begin{figure}[ht]
+\renewcommand\thefigure{5.17}
+\centering
+\includegraphics[width=4.5cm,height=7cm]{Images/addMed.png},
+\caption{Add medicine}
+\label{add Med}
+\end{figure}
+
+\newpage
+
 \subsubsection{Medicine Scanner}
 This page is where a user will locate a a bar cod scanner which they can use if they wish to scan a medicine bottle they are using on an animal and it will return data back to them giving information about that certain medicine being used.
 
-%\subsubsection{Search Page}
+\begin{figure}[ht]
+\renewcommand\thefigure{5.18}
+\centering
+\includegraphics[width=4cm,height=6cm]{Images/scan1.png},
+\caption{Scanner}
+\label{feed}
+\end{figure}
+
+\subsubsection{Report Page}
 
 %\subsection{Styling}
 
@@ -902,6 +976,12 @@ We opted to use the Ionic DevApp Application from the iOS store for testing on i
 Instead we decided to build an Adnroid APK file which we could then install on an Android device and do some better testing from there.
 
 \section{Limitations}
+The following are some of the limitations in our FarmWithEase app:
+
+\subsection{Service Limitations}
+In our application we are using Firebase authentication as a free service as we currently are only developing the app as a prototype and seeing as we are students using a free piece of software was a good idea. 
+
+We are also hosting the application locally on our machines which for the mean time suits our application as we are only testing its features and building it as a prototype.
 
 \section{Results V Objectives}
 
