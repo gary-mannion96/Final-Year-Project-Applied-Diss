@@ -1,25 +1,49 @@
 <ion-menu [content]="content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-  
-    <ion-content>
-      <ion-list>
-        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-            <ion-icon item-start [name]="p.icon"></ion-icon>
-          {{p.title}}
-        </button>
-        <button menuClose ion-item (click)="logoutClicked(user)">Log Out
-            <ion-icon item-start name="log-out"></ion-icon>
-          </button>
-      </ion-list>
-      
-    </ion-content>
-    
-  
-  </ion-menu>
-  
-  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
-  <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+   <ion-content>
+     <!-- <ion-list>
+      <ion-list-header>
+        Navigate
+      </ion-list-header>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon item-start [name]="p.icon"></ion-icon>
+        {{p.title}}
+      </button>
+    </ion-list>   -->
+
+     <ion-list *ngIf="!showAccount">
+        <ion-list-header>
+          Register or Login
+        </ion-list-header>
+        <button menuClose ion-item (click)="login()">
+          <ion-icon item-start name="log-in"></ion-icon>
+          Login
+        </button> 
+        <button menuClose ion-item (click)="register()">
+          <ion-icon item-start name="create"></ion-icon>
+          Register
+        </button>   
+      </ion-list> 
+
+    <ion-list *ngIf="showAccount">
+      <ion-list-header>
+        Account
+      </ion-list-header>
+      <button menuClose ion-item *ngFor="let p of loggedInPages" (click)="openPage(p)">
+        <ion-icon item-start [name]="p.icon"></ion-icon>
+        {{p.title}}
+      </button>  
+      <button menuClose ion-item (click)="logout()">Log Out
+        <ion-icon item-start name="log-out"></ion-icon>
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

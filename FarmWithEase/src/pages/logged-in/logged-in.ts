@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
-import { AngularFireAuth} from 'angularfire2/auth';
-
-
-
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+/*
+make some updates here later for when user has logged in
+give some options for what to do or some instructions
+*/
 @IonicPage()
 @Component({
   selector: 'page-logged-in',
@@ -11,24 +11,7 @@ import { AngularFireAuth} from 'angularfire2/auth';
 })
 export class LoggedInPage {
 
-  constructor(private afAuth: AngularFireAuth, private toast: ToastController, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    this.afAuth.authState.subscribe(data =>{
-      if(data.email && data.uid){      
-        this.toast.create({
-        message: 'Welcome to Farm With Ease   ' + data.email,
-        duration: 3000
-      }).present();
-      }
-      else{
-        this.toast.create({
-          message: 'No user found',
-          duration: 3000
-        }).present();
-      }
-    })
-  }
-  
 }
