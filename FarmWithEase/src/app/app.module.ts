@@ -24,6 +24,8 @@ import { menuPage } from '../pages/MainMenu/menu';
 import { FIREBASE_CONFIG } from './app.firebase.config';
 // search
 import { SearchPipe } from '../pipes/search/search';
+// logged in
+import { LoggedInPage } from '../pages/logged-in/logged-in';
 // medicine
 import { MedicineAddProvider } from '../providers/medicine-add/medicine-add';
 //Tagging
@@ -54,7 +56,8 @@ import { IonicStorageModule } from '@ionic/storage';
     ForgotPasswordPage,
     AddAisPage,
     ReportPage,
-    AddReportsPage
+    AddReportsPage,
+    LoggedInPage
   ],
   imports: [
     BrowserModule,
@@ -77,7 +80,8 @@ import { IonicStorageModule } from '@ionic/storage';
     ReportPage,
     ForgotPasswordPage,
     AddAisPage,
-    AddReportsPage
+    AddReportsPage,
+    LoggedInPage
   ],
   providers: [
     StatusBar,
