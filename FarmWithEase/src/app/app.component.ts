@@ -5,7 +5,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Storage } from '@ionic/storage';
-
 import { taggingPage } from '../pages/tagging/tagging';
 import { FeedPage } from '../pages/feed/feed';
 import { medicinePage } from '../pages/medicine/medicine';
@@ -14,7 +13,6 @@ import { menuPage } from '../pages/MainMenu/menu';
 import { User } from '../Models/user';
 import { HomePage } from '../pages/home/home';
 import { ReportPage } from '../pages/Report/report';
-import { LoggedInPage } from './../pages/logged-in/logged-in';
 
 @Component({
   templateUrl: 'app.html'
