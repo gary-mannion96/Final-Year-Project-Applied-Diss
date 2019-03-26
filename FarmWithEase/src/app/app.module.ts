@@ -39,6 +39,7 @@ import { ForgotPasswordPage } from "../pages/forgot-password/forgot-password";
 import { ReportPage } from '../pages/Report/report';
 import { AddReportsPage } from '../pages/add-reports/add-reports';
 import { ReportingProvider } from '../providers/report/reporting';
+import { IonicStorageModule } from '@ionic/storage';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { ReportingProvider } from '../providers/report/reporting';
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireAuthModule,
-    HttpModule
+    HttpModule,
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [

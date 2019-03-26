@@ -1,37 +1,42 @@
 <ion-header>
-    <ion-navbar color="primary">
-      <ion-title>Farm With Ease</ion-title>
-    </ion-navbar>
-  </ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Farm With Ease</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-image">
   
-  <ion-content class="bg-image">
-    
-      <form (ngSubmit)="login(user)" ngNativeValidate>
-        <ion-card>
-          <ion-card-content>
-            <ion-list no-lines>
-              <ion-item>
-                <ion-label stacked color="primary">Email Address</ion-label>
-                <ion-input type="email" name="email" [(ngModel)]="user.email" required></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label stacked color="primary">Password</ion-label>
-                <ion-input type="password" name="password" [(ngModel)]="user.password" required></ion-input>
-                
-              </ion-item>
-              <ion-item>
-                <p><a (click)="resetPassword()">Forget Password?</a></p>
-              </ion-item>
-              <div class="login-btns">
-                <button ion-button color="primary" color="light" style="color: rgb(0, 255, 21); border: solid 2px; width: 49.5%;" round>LOGIN</button>
-                <button ion-button color="primary" color="light" style="color: rgb(55, 0, 255); border: solid 2px; width: 49.5%;" type="button" round (click)="register()">Register</button>
-              </div> 
-            </ion-list>
-            <!-- <button ion-button color="danger" type="button" (click)="googleLogin()" ion-left round block>
-              <ion-icon name="logo-googleplus" style="padding-right: 6px;"></ion-icon>
-              <div>Login With Google</div>
-            </button> -->
-          </ion-card-content>
-        </ion-card>
-      </form>
-    </ion-content>
+    <form (ngSubmit)="login(user)" ngNativeValidate>
+      <ion-card>
+        <ion-card-content>
+          <ion-list no-lines>
+            <ion-item>
+              <ion-label stacked color="primary">Email Address</ion-label>
+              <ion-input type="email" name="email" [(ngModel)]="user.email" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked color="primary">Password</ion-label>
+              <ion-input type="password" name="password" [(ngModel)]="user.password" required></ion-input>
+              <button ion-button clear item-end (click)='hideShowPassword()' type="button" style="height:32px;">
+                <ion-icon name="eye" [name]="passwordIcon" style="font-size:32px;"></ion-icon>
+              </button>
+            </ion-item>
+            <ion-item>
+              <p><a (click)="resetPassword()">Forget Password?</a></p>
+            </ion-item>
+            <div class="login-btns">
+              <button ion-button color="primary" color="light" style="color: rgb(0, 255, 21); border: solid 2px; width: 49.5%;" round>LOGIN</button>
+              <button ion-button color="primary" color="light" style="color: rgb(55, 0, 255); border: solid 2px; width: 49.5%;" type="button" round (click)="register()">Register</button>
+            </div> 
+          </ion-list>
+          <!-- <button ion-button color="danger" type="button" (click)="googleLogin()" ion-left round block>
+            <ion-icon name="logo-googleplus" style="padding-right: 6px;"></ion-icon>
+            <div>Login With Google</div>
+          </button> -->
+        </ion-card-content>
+      </ion-card>
+    </form>
+  </ion-content>
