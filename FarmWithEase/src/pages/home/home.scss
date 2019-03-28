@@ -1,10 +1,10 @@
 page-home {
-    .bg-image{
-        background-image: url('../../assets/img/silage1.jpg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-    }
+     .bg-image{
+         background-image: url('../../assets/img/silage1.jpg');
+         background-repeat: no-repeat;
+         background-size: contain;
+         background-position: center;
+     }
 
     ion-title {
         position: absolute;
@@ -17,7 +17,7 @@ page-home {
       }
 
       ion-card.card{
-        margin-top: 250px;
+        margin-top: 120px;
         //background: rgba(232, 230, 230, 0.8px);
         border-radius: 15px;
         margin-bottom: 5px;

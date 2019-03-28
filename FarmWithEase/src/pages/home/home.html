@@ -20,12 +20,13 @@
 
   <ion-card *ngIf="productFound">
     <ion-card-header>
-      <h2>Price: $ {{selectedProduct.price}}</h2>
+      <h2>Name: {{selectedProduct.name}}</h2>
     </ion-card-header>
     <ion-card-content>
       <ul>
-        <li>{{selectedProduct.plu}}</li>
-        <li>{{selectedProduct.name}}</li>
+        <li>{{selectedProduct.milkSell}} (For Milk)</li>
+        <li>{{selectedProduct.meatSell}} (For Meat)</li>
+        <li>{{selectedProduct.withdrawal}}</li>
         <li>{{selectedProduct.desc}}</li>
       </ul>
     </ion-card-content>

@@ -13,9 +13,9 @@
 <ion-content>
 
   <ion-list no-lines>
-    <ion-searchbar placeholder="Search Report" [(ngModel)]="terms"></ion-searchbar>
+    <!-- <ion-searchbar placeholder="Search Report" [(ngModel)]="terms"></ion-searchbar> -->
 
-    <ion-item-sliding *ngFor="let report of reports | search : terms">
+    <ion-item-sliding *ngFor="let report of reports">
 
       <ion-item>
 

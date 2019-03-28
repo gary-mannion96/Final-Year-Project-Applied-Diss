@@ -1,12 +1,15 @@
 [
   {
     "plu":"8713184100450",
-    "name":"ABOY GARY BOY",
-    "price":760 ,
-    "desc":"NOW WHERE BAILING"
+    "name":"Rotavec Corona",
+    "price": 100,
+    "desc":"10mg Dosage",
+    "milkSell": "7 days",
+    "meatSell": "14 days",
+    "withdrawal": "Drowsyness"
   },
   {
-    "plu":"01234567898",
+    "plu":"7622300754136",
     "name":"Intel Core i7 3.3GHz",
     "price":200,
     "desc":"Intel Core i7 3.3GHz L2 16MB 4.6ns"
