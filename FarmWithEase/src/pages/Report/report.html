@@ -13,13 +13,13 @@
 <ion-content>
 
   <ion-list no-lines>
-    <!-- <ion-searchbar placeholder="Search Report" [(ngModel)]="terms"></ion-searchbar> -->
-
+    
     <ion-item-sliding *ngFor="let report of reports">
 
       <ion-item text-wrap>
 
         {{report.reportInfo}}
+        <p>Date: {{report.Date}}</p>
 
       </ion-item>
 
@@ -32,5 +32,7 @@
     </ion-item-sliding>
 
   </ion-list>
+
+  
 
 </ion-content>

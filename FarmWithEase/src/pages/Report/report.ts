@@ -49,6 +49,6 @@ export class ReportPage {
       }
 
     //Remove from database
-    this.reportingService.deleteAis(report._id);
+    this.reportingService.deleteReports(report._id);
   }
 }

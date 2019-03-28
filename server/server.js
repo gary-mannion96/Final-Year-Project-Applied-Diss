@@ -41,6 +41,7 @@ var Aiing = mongoose.model('Aiing', {
 
 var Reporting = mongoose.model('Reporting', {
     reportInfo: String,
+    Date: Date
 });
 
 // Routes
@@ -151,6 +152,7 @@ var Reporting = mongoose.model('Reporting', {
             // create a ais, information comes from request from Ionic
             Reporting.create({
                 reportInfo: req.body.reportInfo,
+                Date: req.body.Date,
                 done : false
             }, function(err, report) {
                 if (err)
@@ -185,7 +187,7 @@ var Reporting = mongoose.model('Reporting', {
             });
         });
 
-        app.delete('/api/reoprts/:report_id', function(req, res) {
+        app.delete('/api/reports/:report_id', function(req, res) {
             Reporting.remove({
                 _id : req.params.report_id
             }, function(err, report) {

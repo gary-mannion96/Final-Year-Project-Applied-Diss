@@ -2,13 +2,6 @@ import { Http, Headers } from '@angular/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map'
 
-/*
-  Generated class for the TaggingProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
-
 @Injectable()
 export class ReportingProvider {
 
@@ -46,7 +39,7 @@ export class ReportingProvider {
 
     }
 
-    deleteAis(id){
+    deleteReports(id){
 
       this.http.delete('http://localhost:8080/api/reports/' + id).subscribe((res) => {
         console.log(res.json());
