@@ -55,7 +55,7 @@ export class FeedPage {
 
   calculateBales(){
     if(this.bales > 0 && this.sBales >= 0){
-      let finalBales = (this.bales * 0.8 + this.sBales * 0.8) / 0.9;
+      let finalBales = (this.bales * 0.8 + this.sBales * 0.8);
       this.baleAMT = parseFloat(finalBales.toFixed(2));
     }
   }
