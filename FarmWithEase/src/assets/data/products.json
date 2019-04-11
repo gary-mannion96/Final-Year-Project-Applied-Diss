@@ -5,7 +5,54 @@
     "price": 100,
     "desc":"10mg Dosage",
     "milkSell": "7 days",
-    "meatSell": "14 days",
-    "withdrawal": "Drowsyness"
+    "meatSell": "14 days"
+  },
+  {
+    "plu":"8713184045430",
+    "name":"Engemycin",
+    "price": 140,
+    "desc":"20ml Dosage",
+    "milk-withdrawal": "48 hours",
+    "meat-withdrawal": "9 days"
+  },
+  {
+    "plu":"5391510230649",
+    "name":"Cronyxin",
+    "price": 120,
+    "desc":"10ml Dosage",
+    "milk-withdrawal": "36 hours",
+    "meat-withdrawal": "7 days"
+  },
+  {
+    "plu":"7390900191650",
+    "name":"Rumenil",
+    "price": 400,
+    "desc":"250ml Dosage",
+    "milk-withdrawal": "5 days",
+    "meat-withdrawal": "13 days"
+  },
+  {
+    "plu":"5391474000791",
+    "name":"Copper SR",
+    "price": 90,
+    "desc":"2 tablets",
+    "milk-withdrawal": "nill",
+    "meat-withdrawal": "nill"
+  },
+  {
+    "plu":"3909000320",
+    "name":"Medimec",
+    "price": 300,
+    "desc":"1ml per 10kg",
+    "milk-withdrawal": "nill",
+    "meat-withdrawal": "22 days"
+  },
+  {
+    "plu":"5391474000135",
+    "name":"Thriver",
+    "price": 130,
+    "desc":"50ml",
+    "milk-withdrawal": "nill",
+    "meat-withdrawal": "nill"
   }
 ]
