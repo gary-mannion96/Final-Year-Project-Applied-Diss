@@ -77,3 +77,75 @@ The following are the main features of our project:
 
 # App Preview<a name = "preview"></a>
 The following images are previews of various pages in our application. 
+
+* Login Page
+
+| IOS  |
+| :-------------: |
+| <img src="previewImages/loginPage.png" width="350" height="600"/> |
+
+[Top](#contents) 
+
+* Register Page
+
+| IOS  |
+| :-------------: |
+| <img src="previewImages/registerPage.png" width="350" height="600"/> |
+
+[Top](#contents) 
+
+* Reset Password
+
+| IOS  |
+| :-------------: |
+| <img src="previewImages/resetPassword.png" width="350" height="600"/> |
+
+[Top](#contents) 
+
+* Side Menu
+
+| IOS  |
+| :-------------: |
+| <img src="previewImages/sideMenu.png" width="350" height="600"/> |
+
+[Top](#contents) 
+
+* Scanner
+
+| IOS  |
+| :-------------: |
+| <img src="previewImages/scanner.png" width="350" height="600"/> |
+
+[Top](#contents) 
+
+* Report Page
+
+| IOS  |
+| :-------------: |
+| <img src="previewImages/reportPage.png" width="350" height="600"/> |
+
+[Top](#contents) 
+
+* Add Pages
+
+| IOS  | IOS | IOS |
+| :-------------: | :-------------: | :-------------: |
+| <img src="previewImages/addAIPage.png" width="350" height="600"/> | <img src="previewImages/addMedicine.png" width="350" height="600"/> | <img src="previewImages/addAIPage.png" width="350" height="600"/> |
+
+[Top](#contents) 
+
+* Pages
+
+| IOS  | IOS | IOS |
+| :-------------: | :-------------: | :-------------: |
+| <img src="previewImages/medicinePage.png" width="350" height="600"/> | <img src="previewImages/taggingPage.png" width="350" height="600"/> | <img src="previewImages/AIpage.png" width="350" height="600"/> |
+
+[Top](#contents) 
+
+* Feed Page
+
+| IOS  | IOS | IOS | IOS |
+| :-------------: | :-------------: | :-------------: | :-------------: |
+| <img src="previewImages/dairycowfeed.png" width="350" height="600"/> | <img src="previewImages/feedPage1.png" width="350" height="600"/> | <img src="previewImages/feedPages.png" width="350" height="600"/> | <img src="previewImages/silagePit.png" width="350" height="600"/> |
+
+[Top](#contents)
