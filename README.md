@@ -37,7 +37,9 @@ For our final year project, we decided to create a Farming App called Farm At Ea
 [Top](#contents) 
 
 # Dissertation<a name = "dissertation"></a>
-Click below to view our Dissertation PDF or click [here]
+Click below to view our Dissertation PDF or click [here](https://github.com/Gazza1996/Final-Year-Project-Applied-Diss/tree/master/Dissertation) to view the latex files used to create it. 
+
+<kbd>[<img src="Images/dissertation.png"></img>](https://github.com/Gazza1996/Final-Year-Project-Applied-Diss/blob/master/Dissertation.pdf)</kbd>
 
 [Top](#contents) 
 
