@@ -158,6 +158,9 @@ The following images are previews of various pages in our application.
 * This repository contains our [FarmWithEase.apk](https://github.com/Gazza1996/Final-Year-Project-Applied-Diss/blob/master/FarmWithEase/FarmWithEase.apk) file.
 * Download this apk and install it on your android device.
 
+### Hosting
+* Our app is being hosted online using the firebase hosting service. It can be accessed [here](https://farming-26588.firebaseapp.com/?fbclid=IwAR2r17Ii8gp7nfq41e5yE5JKVo52AhHzU4Iq_odxpmAJrQNhnJIwdG7xDmQ)
+
 ## Deploy Locally
 
 Prerequisites
