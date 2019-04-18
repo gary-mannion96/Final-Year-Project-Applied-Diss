@@ -149,3 +149,51 @@ The following images are previews of various pages in our application.
 | <img src="previewImages/dairycowfeed.png" width="350" height="600"/> | <img src="previewImages/feedPage1.png" width="350" height="600"/> | <img src="previewImages/feedPages.png" width="350" height="600"/> | <img src="previewImages/silagePit.png" width="350" height="600"/> |
 
 [Top](#contents)
+
+# Deployment<a name = "deploy"></a>
+### Deploy on Android Device
+* This repository contains our [FarmWithEase.apk](https://github.com/Gazza1996/Final-Year-Project-Applied-Diss/blob/master/FarmWithEase/FarmWithEase.apk) file.
+* Download this apk and install it on your android device.
+
+## Deploy Locally
+
+Prerequisites
+* Mongo Installed - Click [here](https://www.mongodb.com/download-center?jmp=tutorials&_ga=2.180285351.2088142531.1523826631-1629278295.1507240892#community) for instructions.
+* NodeJS, Ionic, Cordova - Click [here](https://ionicframework.com/docs/intro/installation/) and follow the instructions.
+
+### Deploy Back-End
+1. Clone or Download this repository.
+2. Start MongoDB. You should be able to do this by pressing the windows key and searching for the following command then running it. 
+```bash
+mongo
+```
+If this fails you can start mongo running by executing the following command from the bin folder of your installation of Mongo.
+```bash
+mongod
+```
+3. On your terminal navigate to the FarmWithEase Back-end folder. Make sure that mongo is running. 
+Then navigate back into Server and repeat the same commands in there:
+
+```bash
+npm install
+node server.js
+```
+
+The back-end should now be running locally on your machine.
+
+### Deploy Front End
+1. Clone or Download this repository.
+2. In your terminal navigate into the folder.  
+3. Run the following command to install the project dependencies.
+
+```bash
+npm install
+```
+4. Once complete run this command to view the application running in development mode.
+
+```bash
+ionic serve
+```
+5. The application should now open up in your browser.
+
+[Top](#contents) 
