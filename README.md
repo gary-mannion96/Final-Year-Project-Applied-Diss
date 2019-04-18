@@ -9,6 +9,7 @@
 * [Architecture](#arc) 
 * [Features](#features)
 * [App Preview](#preview)
+* [Deployment](#deploy)
 
 # Project Details<a name = "details"></a>
 
