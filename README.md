@@ -177,8 +177,7 @@ If this fails you can start mongo running by executing the following command fro
 ```bash
 mongod
 ```
-3. On your terminal navigate to the FarmWithEase Back-end folder. Make sure that mongo is running. 
-Then navigate back into Server and repeat the same commands in there:
+3. In your terminal or CMD, navigate to the FarmWithEase back-end folder which in this project is called 'server'. First make sure that mongo is running in its own terminal. Complete the following commands to get the server running.
 
 ```bash
 npm install
