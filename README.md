@@ -34,11 +34,13 @@ For our final year project, we decided to create a Farming App called Farm At Ea
 
 # Video Demo<a name = "demo"></a>
 
-This is a link to brief 2 min video of the application.
-https://www.youtube.com/watch?v=0lMA6Trt_xg
+###### Quick 2 minute video
 
-This is a link to the demo of our application.
-https://www.youtube.com/watch?v=v1VYPLz4iYU
+<kbd>[![IMAGE ALT TEXT HERE](Images/video.png)](https://www.youtube.com/watch?v=0lMA6Trt_xg)</kbd>
+
+###### More in depth video with detailed description
+
+<kbd>[![IMAGE ALT TEXT HERE](Images/video.png)](https://www.youtube.com/watch?v=v1VYPLz4iYU)</kbd>
 
 [Top](#contents) 
 
