@@ -68,13 +68,15 @@ The following are the main features of our project:
 * Users can create their own Account
 * Users can Log into their Account
 * Users can reset their password if they have forgotten theirs
-* Users has option for four areas AI, Medicines, Tagging, Feed.
+* Users has option for six areas AI, Medicines, Tagging, Feed, Scanner, Reports.
 * Users can update and delete but only in certain parts of a section.
 * Users can search medicines and tags.
-* Logged in users can create their own notice Board ads for the app
-* Logged in users can post their own messages on the Farm At Ease Notice Board
-* Logged in users can view messages they have created
-* Logged in users can edit and delete messages they have created
+* Logged in users can enter and delete new heard tags.
+* Logged in users can calaulate the amount silage feed needed for the winter and spring mounts.
+* Logged in users can record animals in calf in AI section.
+* Logged in users can scan medicine bottles for information on withdraw period for meat and milk.
+* Logged in users can record heard animales reciving medicine.
+* Logged in users can record heard reports in the reports section.
 
 [Top](#contents) 
 
